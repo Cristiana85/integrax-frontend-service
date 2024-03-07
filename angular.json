@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "integra-x-frontend-service": {
+    "integrax-frontend-service": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/integra-x-frontend-service",
+            "outputPath": "dist/integrax-frontend-service",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "integra-x-frontend-service:build:production"
+              "browserTarget": "integrax-frontend-service:build:production"
             },
             "development": {
-              "browserTarget": "integra-x-frontend-service:build:development"
+              "browserTarget": "integrax-frontend-service:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "integra-x-frontend-service:build"
+            "browserTarget": "integrax-frontend-service:build"
           }
         },
         "test": {
