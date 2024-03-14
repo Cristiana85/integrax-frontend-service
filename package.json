@@ -1,5 +1,5 @@
 {
-  "name": "integrax-frontend-gcl",
+  "name": "integrax-frontend-service",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:integrax-frontend-gcl": "node dist/integrax-frontend-gcl/server/server.mjs"
+    "serve:ssr:integrax-frontend-service": "node dist/integrax-frontend-service/server/server.mjs"
   },
   "private": true,
   "dependencies": {
