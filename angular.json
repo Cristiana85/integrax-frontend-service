@@ -61,6 +61,14 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "headers": {
+              "Access-Control-Allow-Origin": "*",
+              "Access-Control-Allow-Headers": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization",
+              "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT,DELETE",
+              "Content-Security-Policy": "frame-src 'self' * https://integrax-backend-gcl-3hkbcb6pua-uc.a.run.app/; default-src 'none'; script-src-elem 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:;object-src 'none'; style-src 'self' 'unsafe-inline'; style-src-elem 'self' 'unsafe-inline'; frame-ancestors 'self' https://integrax-backend-gcl-3hkbcb6pua-uc.a.run.app/; connect-src 'self' * http://localhost:8080/ http://localhost:5052/ https://integrax-backend-gcl-3hkbcb6pua-uc.a.run.app/"
+            }
+          },
           "configurations": {
             "production": {
               "buildTarget": "integrax-frontend-service:build:production"
