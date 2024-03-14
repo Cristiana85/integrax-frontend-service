@@ -24,8 +24,8 @@ import { SignupComponent } from './landing-page/auth/signup/signup.component';
 import { DatePipe } from '@angular/common';
 import { ChPasswordComponent } from './landing-page/auth/ch-password/ch-password.component';
 import { WasmService } from './services/wasm.service';
-import { ErrorInterceptor } from './account/error.interceptor';
-import { JwtInterceptor } from './account/jwt.interceptor';
+import { ErrorInterceptor } from './landing-page/auth/error.interceptor';
+import { JwtInterceptor } from './landing-page/auth/jwt.interceptor';
 
 @NgModule({
   declarations: [

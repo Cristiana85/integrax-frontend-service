@@ -6,5 +6,5 @@
 export const environment = {
   production: false,
   //apiRoot: 'http://localhost:5052'
-  apiRoot: 'https://integrax-backend-gcl-3hkbcb6pua-uc.a.run.app:8080'
+  apiRoot: 'https://integrax-backend-gcl-3hkbcb6pua-uc.a.run.app'
 };
