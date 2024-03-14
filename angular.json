@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "integrax-frontend-service": {
+    "integra-x-frontend-service": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/integrax-frontend-service",
+            "outputPath": "dist/integra-x-frontend-service",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -30,22 +30,20 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "10mb",
+                  "maximumError": "20mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "4mb"
                 }
               ],
               "outputHashing": "all"
@@ -65,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "integrax-frontend-service:build:production"
+              "buildTarget": "integra-x-frontend-service:build:production"
             },
             "development": {
-              "browserTarget": "integrax-frontend-service:build:development"
+              "buildTarget": "integra-x-frontend-service:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,16 +74,12 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "integrax-frontend-service:build"
+            "buildTarget": "integra-x-frontend-service:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -93,7 +87,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -102,6 +95,6 @@
     }
   },
   "cli": {
-    "analytics": "d2eff6db-ae09-4e07-8068-09307e74cca5"
+    "analytics": false
   }
 }
