@@ -2,55 +2,162 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LightboxModule } from 'ngx-lightbox';
 
 import { GoogleLoginProvider, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { FlatpickrModule } from 'angularx-flatpickr';
+import { CountUpModule } from 'ngx-countup';
+import { NgxEchartsModule, provideEcharts } from 'ngx-echarts';
+import { NgxMasonryModule } from 'ngx-masonry';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { NgxTypedJsModule } from 'ngx-typed-js';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { NgScrollbarModule } from 'ngx-scrollbar';
+
+import { SimplebarAngularModule } from 'simplebar-angular';
 
 
+import { SharedModule } from "./landrick/shared/shared.module";
 
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
-
+import { FeatherModule } from 'angular-feather';
 
 // Apex chart
+import { NgApexchartsModule } from 'ng-apexcharts';
 
+import { allIcons } from 'angular-feather/icons';
 import { RePasswordComponent } from './landing-page/auth/re-password/re-password.component';
 import { SigninComponent } from './landing-page/auth/signin/signin.component';
 import { SignupComponent } from './landing-page/auth/signup/signup.component';
+import { CorporatePricingComponent } from './landing-page/core/components/corporate-pricing/corporate-pricing.component';
+import { HeaderComponent } from './landing-page/core/components/header/header.component';
+import { IndexComponent } from './landing-page/core/components/index/index.component';
+import { WorkspaceComponent } from './landing-page/core/components/workspace/workspace.component';
+import { AuthBsLoginComponent } from './landrick/auth/auth-bs-login/auth-bs-login.component';
+import { AuthBsResetComponent } from './landrick/auth/auth-bs-reset/auth-bs-reset.component';
+import { AuthBsSignupComponent } from './landrick/auth/auth-bs-signup/auth-bs-signup.component';
+import { AuthCoverLoginComponent } from './landrick/auth/auth-cover-login/auth-cover-login.component';
+import { AuthCoverRePasswordComponent } from './landrick/auth/auth-cover-re-password/auth-cover-re-password.component';
+import { AuthCoverSignupComponent } from './landrick/auth/auth-cover-signup/auth-cover-signup.component';
+import { AuthLoginBgVideoComponent } from './landrick/auth/auth-login-bg-video/auth-login-bg-video.component';
+import { AuthLoginComponent } from './landrick/auth/auth-login/auth-login.component';
+import { AuthRePasswordComponent } from './landrick/auth/auth-re-password/auth-re-password.component';
+import { AuthResetPasswordBgVideoComponent } from './landrick/auth/auth-reset-password-bg-video/auth-reset-password-bg-video.component';
+import { AuthSignupBgVideoComponent } from './landrick/auth/auth-signup-bg-video/auth-signup-bg-video.component';
+import { AuthSignupComponent } from './landrick/auth/auth-signup/auth-signup.component';
+import { LoginComponent } from './landrick/auth/login/login.component';
+import { RegistrationComponent } from './landrick/auth/registration/registration.component';
+import { EmailAlertComponent } from './landrick/email/email-alert/email-alert.component';
+import { EmailConfirmationComponent } from './landrick/email/email-confirmation/email-confirmation.component';
+import { EmailInvoiceComponent } from './landrick/email/email-invoice/email-invoice.component';
+import { EmailPasswordResetComponent } from './landrick/email/email-password-reset/email-password-reset.component';
+import { FooterComponent } from './landrick/shared/footer/footer.component';
+import { SwitcherComponent } from './landrick/shared/switcher/switcher.component';
 
 import { DatePipe } from '@angular/common';
+import { AlertComponent } from './components/old/alert/alert.component';
+import { ErrorInterceptor } from './components/old/helpers/error.interceptor';
+import { JwtInterceptor } from './components/old/helpers/jwt.interceptor';
+import { DashboardFileManagerComponent } from './dashboard/dashboard-file-manager/dashboard-file-manager.component';
+import { DashboardFooterComponent } from './dashboard/dashboard-footer/dashboard-footer.component';
+import { DashboardHeaderComponent } from './dashboard/dashboard-header/dashboard-header.component';
+import { DashboardSidebarComponent } from './dashboard/dashboard-sidebar/dashboard-sidebar.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChPasswordComponent } from './landing-page/auth/ch-password/ch-password.component';
+import { MasterPageComponent } from './landing-page/core/components/master-page/master-page.component';
+import { MaterialModule } from './material/material.module';
 import { WasmService } from './services/wasm.service';
-import { ErrorInterceptor } from './landing-page/auth/error.interceptor';
-import { JwtInterceptor } from './landing-page/auth/jwt.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    LoginComponent,
+    RegistrationComponent,
+    MasterPageComponent,
+    AuthCoverLoginComponent,
+    AuthCoverRePasswordComponent,
+    AuthCoverSignupComponent,
+    AuthLoginComponent,
     SigninComponent,
+    AuthRePasswordComponent,
     RePasswordComponent,
     ChPasswordComponent,
+    AuthSignupComponent,
     SignupComponent,
+    EmailAlertComponent,
+    EmailConfirmationComponent,
+    EmailInvoiceComponent,
+    EmailPasswordResetComponent,
+    IndexComponent,
+    SwitcherComponent,
+    CorporatePricingComponent,
+    WorkspaceComponent,
+    AuthBsLoginComponent,
+    AuthLoginBgVideoComponent,
+    AuthBsSignupComponent,
+    AuthSignupBgVideoComponent,
+    AuthBsResetComponent,
+    AuthResetPasswordBgVideoComponent,
+    AlertComponent,
+    //DASHBOARD Component
+    DashboardComponent,
+    DashboardSidebarComponent,
+    DashboardHeaderComponent,
+    DashboardFileManagerComponent,
+    DashboardFooterComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     RouterModule,
+    CarouselModule,
+    FeatherModule.pick(allIcons),
+    ScrollToModule.forRoot(),
     RouterModule.forRoot([], {}),
+    YouTubePlayerModule,
+    NgbDropdownModule,
+    CKEditorModule,
+    NgbModule,
+    NgbNavModule,
     FormsModule,
     ReactiveFormsModule,
+    SlickCarouselModule,
+    NgApexchartsModule,
+    NgxTypedJsModule,
+    FlatpickrModule.forRoot(),
+    CountUpModule,
+    NgxMasonryModule,
+    LightboxModule,
+    SharedModule,
+    SimplebarAngularModule,
     HttpClientModule,
     AppRoutingModule,
+    NgxEchartsModule,
+    MaterialModule,
+    NgScrollbarModule,
+  ],
+  exports: [
+    FeatherModule,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [
     DatePipe,
+    provideEcharts(),
     WasmService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
@@ -70,7 +177,7 @@ import { JwtInterceptor } from './landing-page/auth/jwt.interceptor';
           console.error(err);
         }
       } as SocialAuthServiceConfig,
-    },
+    }
   ],
   bootstrap: [AppComponent]
 })

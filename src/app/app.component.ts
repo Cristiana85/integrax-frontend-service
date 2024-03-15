@@ -7,7 +7,7 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'integrax-frontend-service';
+  title = 'integra-x-frontend-service';
 
   constructor(private router: Router) {
     /**

@@ -3,12 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs';
-import { AccountService } from '../../../services/account.service';
-import { ProjectsService } from '../../../services/projects.service';
-import { TokenStorageService } from '../../../services/token-storage.service';
-import { WasmService } from '../../../services/wasm.service';
-import { Project } from '../../../models/project';
-
+import { Project } from 'src/app/models/project';
+import { AccountService } from 'src/app/services/account.service';
+import { ProjectsService } from 'src/app/services/projects.service';
+import { TokenStorageService } from 'src/app/services/state.service';
+import { WasmService } from 'src/app/services/wasm.service';
 
 @Component({
   selector: 'app-signin',
@@ -76,7 +75,7 @@ export class SigninComponent implements OnInit {
     }
 
     this.loading = true;
-    this.accountService.login(this.f['email'].value, this.f['password'].value)
+    this.accountService.login(this.f.email.value, this.f.password.value)
       .pipe(first())
       .subscribe({
         next: (ret) => {

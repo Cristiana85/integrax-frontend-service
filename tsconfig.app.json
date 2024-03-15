@@ -7,6 +7,7 @@
   },
   "files": [
     "./src/main.ts", // added ../ to reflect current file structure
+    "./src/polyfills.ts"
   ],
   "include": [
     "src/**/*.d.ts"

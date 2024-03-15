@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
-import { AccountService } from '../../../services/account.service';
-import { ProjectsService } from '../../../services/projects.service';
-import { TokenStorageService } from '../../../services/token-storage.service';
+import { AccountService } from 'src/app/services/account.service';
+import { ProjectsService } from 'src/app/services/projects.service';
+import { TokenStorageService } from 'src/app/services/state.service';
 
 @Component({
   selector: 'app-signup',

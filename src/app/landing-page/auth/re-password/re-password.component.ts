@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
-import { AccountService } from '../../../services/account.service';
+import { AccountService } from 'src/app/services/account.service';
 
 @Component({
   selector: 'app-re-password',
@@ -68,7 +68,7 @@ export class RePasswordComponent implements OnInit {
     }
 
     this.loading = true;
-    this.accountService.forgotPassword(this.f['email'].value, this.f['email'].value)
+    this.accountService.forgotPassword(this.f.email.value, this.f.email.value)
       .pipe(first())
       .subscribe({
         next: (ret) => {

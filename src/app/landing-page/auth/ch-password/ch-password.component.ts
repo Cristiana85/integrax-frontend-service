@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AccountService } from '../../../services/account.service';
-import { TokenStorageService } from '../../../services/token-storage.service';
-
+import { AccountService } from 'src/app/services/account.service';
+import { TokenStorageService } from 'src/app/services/state.service';
 
 @Component({
   selector: 'app-ch-password',
@@ -24,7 +23,7 @@ export class ChPasswordComponent implements OnInit {
   submitted = false;
 
   isLoggedin?: boolean;
-  token!: string;
+  token: string;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -68,7 +67,7 @@ export class ChPasswordComponent implements OnInit {
       return;
     }
 
-    this.accountService.resetPassword(this.token, this.f['newPassword'].value)
+    this.accountService.resetPassword(this.token, this.f.newPassword.value)
       .subscribe(ret => {
         if (ret.successful) {
           this.tokenStorage.saveToken(ret.content['token']);

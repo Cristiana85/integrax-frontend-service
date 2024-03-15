@@ -4,13 +4,21 @@ import { ChPasswordComponent } from './landing-page/auth/ch-password/ch-password
 import { RePasswordComponent } from './landing-page/auth/re-password/re-password.component';
 import { SigninComponent } from './landing-page/auth/signin/signin.component';
 import { SignupComponent } from './landing-page/auth/signup/signup.component';
+import { CorporatePricingComponent } from './landing-page/core/components/corporate-pricing/corporate-pricing.component';
+import { IndexComponent } from './landing-page/core/components/index/index.component';
+import { MasterPageComponent } from './landing-page/core/components/master-page/master-page.component';
+import { SwitcherComponent } from './landrick/shared/switcher/switcher.component';
 import { AuthGuard } from './landing-page/auth/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    component: SigninComponent,
+    component: MasterPageComponent,
     children: [
+      { path: '', component: IndexComponent },
+      { path: 'index', component: IndexComponent },
+      { path: '#', component: SwitcherComponent },
+      { path: 'corporate-pricing', component: CorporatePricingComponent },
 
       //USED
       { path: 'signin', component: SigninComponent },
@@ -38,7 +46,7 @@ const routes: Routes = [
   { path: 'email-password-reset', component: EmailPasswordResetComponent },*/
 
   //Login
-]
+  { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule), canActivate: [AuthGuard] }]
   ;
 
 @NgModule({

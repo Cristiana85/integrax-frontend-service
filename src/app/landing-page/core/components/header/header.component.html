@@ -1,0 +1,788 @@
+<!-- TAGLINE START-->
+<div class="tagline bg-light" *ngIf="sliderTopbar == true">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-slider">
+          <ul class="list-inline mb-0 move-text">
+            <li class="list-inline-item px-2 mb-0"><b>EOG</b> $ 55.88 <span class="text-success">+$ 4.62 ( +9.01%
+                )</span></li>
+            <li class="list-inline-item px-2 mb-0"><b>CHKP</b> $ 120.03 <span class="text-danger">-$ 14.07 ( -10.49%
+                )</span></li>
+            <li class="list-inline-item px-2 mb-0"><b>FANG</b> $ 63.58 <span class="text-success">+$ 5.17 ( +8.84%
+                )</span></li>
+            <li class="list-inline-item px-2 mb-0"><b>M</b> $ 14.75 <span class="text-success">+$ 1.05 ( +7.66% )</span>
+            </li>
+            <li class="list-inline-item px-2 mb-0"><b>PKI</b> $ 139.72 <span class="text-danger">-$ 11.41 ( -7.55%
+                )</span></li>
+            <li class="list-inline-item px-2 mb-0"><b>ABMD</b> $ 326.23 <span class="text-danger">-$ 21.61 ( -6.21%
+                )</span></li>
+            <li class="list-inline-item px-2 mb-0"><b>BITCOIN</b> $ 37,471.47 <span class="text-danger">+$ 492.60 (
+                +1.33% )</span></li>
+            <li class="list-inline-item px-2 mb-0"><b>XRP</b> <span> $ 0.39</span><span class="text-muted"> UNCH</span>
+            </li>
+            <li class="list-inline-item px-2 mb-0"><b>LITECOIN</b> <span> $ 148.67</span><span class="text-danger">-$
+                5.58 ( -3.62% )</span></li>
+            <li class="list-inline-item px-2 mb-0"><b>BITCOIN CASH</b> <span> $ 427.37</span><span
+                class="text-danger">-$ 15.98 ( -3.60% )</span></li>
+            <li class="list-inline-item px-2 mb-0"><b>ETHEREUM</b> $ 1,647.87 <span class="text-danger">+$ 14.51 (
+                +0.89% )</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- TAGLINE END-->
+
+<!-- Navbar STart -->
+<header id="topnav" class="defaultscroll sticky" (window:scroll)="windowScroll()" [class]="navClass"
+  [ngClass]="{'tagline-height': sliderTopbar == true}">
+  <div class="container">
+    <!-- Logo container-->
+    <div>
+      <a class="logo" routerLink="/index" *ngIf="navClass !== 'nav-light'">
+        <img src="assets/images/logo-dark.png" class="l-dark logo-light-mode" height="24" alt="">
+        <img src="assets/images/logo-light.png" class="logo-dark-mode" height="24" alt="">
+      </a>
+
+      <div class="menu-extras">
+        <div class="menu-item">
+          <!-- Mobile menu toggle-->
+          <a class="navbar-toggle" id="isToggle" (click)="toggleMenu()" [ngClass]="{'open': isCondensed === true}">
+            <div class="lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+          <!-- End mobile menu toggle-->
+        </div>
+      </div>
+      <ul class="buy-button list-inline mb-0" *ngIf="shopPages == true">
+        <li class="list-inline-item mb-0 pe-1">
+          <div class="dropdown" ngbDropdown>
+            <button type="button" class="btn dropdown-toggle p-0" ngbDropdownToggle data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="uil uil-search text-dark fs-5 align-middle"></i>
+            </button>
+            <div class="dropdown-menu dd-menu dropdown-menu-end bg-white shadow rounded border-0 mt-3 py-0"
+              style="width: 300px;" ngbDropdownMenu>
+              <!-- <div class="search-bar">
+                <div id="itemSearch" class="menu-search mb-0"> -->
+              <form class="searchform">
+                <input type="text" id="text" name="name" class="form-control border rounded" placeholder="Search...">
+                <input type="submit" id="searchItemsubmit" value="Search">
+              </form>
+              <!-- </div>
+              </div> -->
+            </div>
+          </div>
+        </li>
+        <li class="list-inline-item mb-0 pe-1">
+          <div class="dropdown" ngbDropdown>
+            <button type="button" class="btn btn-icon btn-pills btn-primary dropdown-toggle" ngbDropdownToggle
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                class="uil uil-shopping-cart align-middle icons"></i></button>
+            <div class="dropdown-menu dd-menu dropdown-menu-end bg-white shadow rounded border-0 mt-3 p-4"
+              ngbDropdownMenu style="width: 300px;">
+              <div class="pb-4">
+                <a href="javascript:void(0)" class="d-flex align-items-center">
+                  <img src="assets/images/shop/product/s-1.jpg" class="shadow rounded" style="max-height: 64px;" alt="">
+                  <div class="flex-1 text-start ms-3">
+                    <h6 class="text-dark mb-0">T-shirt (M)</h6>
+                    <p class="text-muted mb-0">$320 X 2</p>
+                  </div>
+                  <h6 class="text-dark mb-0">$640</h6>
+                </a>
+
+                <a href="javascript:void(0)" class="d-flex align-items-center mt-4">
+                  <img src="assets/images/shop/product/s-2.jpg" class="shadow rounded" style="max-height: 64px;" alt="">
+                  <div class="flex-1 text-start ms-3">
+                    <h6 class="text-dark mb-0">Bag</h6>
+                    <p class="text-muted mb-0">$50 X 5</p>
+                  </div>
+                  <h6 class="text-dark mb-0">$250</h6>
+                </a>
+
+                <a href="javascript:void(0)" class="d-flex align-items-center mt-4">
+                  <img src="assets/images/shop/product/s-3.jpg" class="shadow rounded" style="max-height: 64px;" alt="">
+                  <div class="flex-1 text-start ms-3">
+                    <h6 class="text-dark mb-0">Watch (Men)</h6>
+                    <p class="text-muted mb-0">$800 X 1</p>
+                  </div>
+                  <h6 class="text-dark mb-0">$800</h6>
+                </a>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-between pt-4 border-top">
+                <h6 class="text-dark mb-0">Total($):</h6>
+                <h6 class="text-dark mb-0">$1690</h6>
+              </div>
+
+              <div class="mt-3 text-center">
+                <a href="javascript:void(0)" class="btn btn-primary me-2">View Cart</a>
+                <a href="javascript:void(0)" class="btn btn-primary">Checkout</a>
+              </div>
+              <p class="text-muted text-start mt-1 mb-0">*T&amp;C Apply</p>
+            </div>
+          </div>
+        </li>
+        <li class="list-inline-item mb-0 pe-1">
+          <a href="javascript:void(0);" class="btn btn-icon btn-pills btn-primary" (click)="wishListModal(content)"><i
+              class="uil uil-heart align-middle icons"></i></a>
+        </li>
+
+        <ng-template #content>
+          <div class="modal-content rounded shadow-lg border-0 overflow-hidden">
+            <div class="modal-body py-5">
+              <div class="text-center">
+                <div class="icon d-flex align-items-center justify-content-center bg-soft-danger rounded-circle mx-auto"
+                  style="height: 95px; width:95px;">
+                  <h1 class="mb-0"><i class="uil uil-heart-break align-middle"></i></h1>
+                </div>
+                <div class="mt-4">
+                  <h4>Your wishlist is empty.</h4>
+                  <p class="text-muted">Create your first wishlist request...</p>
+                  <div class="mt-4">
+                    <a href="javascript:void(0)" class="btn btn-outline-primary">+ Create new wishlist</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+
+        <li class="list-inline-item mb-0">
+          <div class="dropdown dropdown-primary" ngbDropdown>
+            <button type="button" class="btn btn-icon btn-pills btn-primary dropdown-toggle" ngbDropdownToggle
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                class="uil uil-user align-middle icons"></i></button>
+            <div class="dropdown-menu dd-menu dropdown-menu-end bg-white shadow rounded border-0 mt-3 py-3"
+              ngbDropdownMenu style="width: 200px;">
+              <a class="dropdown-item text-dark" href="javascript:void(0)"><i
+                  class="uil uil-user align-middle me-1"></i> Account</a>
+              <a class="dropdown-item text-dark" href="javascript:void(0)"><i
+                  class="uil uil-clipboard-notes align-middle me-1"></i>
+                Order History</a>
+              <a class="dropdown-item text-dark" href="javascript:void(0)"><i
+                  class="uil uil-arrow-circle-down align-middle me-1"></i>
+                Download</a>
+              <div class="dropdown-divider my-3 border-top"></div>
+              <a class="dropdown-item text-dark" href="javascript:void(0)"><i
+                  class="uil uil-sign-out-alt align-middle me-1"></i>
+                Logout</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="buy-button list-inline mb-0" *ngIf="buttonList == true">
+        <li class="list-inline-item mb-0 ms-1">
+          <div class="dropdown">
+            <button type="button" class="btn btn-link text-decoration-none dropdown-toggle p-0 pe-2"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="uil uil-search text-muted"></i>
+            </button>
+            <div class="dropdown-menu dd-menu dropdown-menu-end bg-white shadow rounded border-0 mt-3 py-0"
+              style="width: 300px;">
+              <form>
+                <input type="text" id="text" name="name" class="form-control border bg-white" placeholder="Search...">
+              </form>
+            </div>
+          </div>
+        </li>
+        <li class="list-inline-item mb-0 ms-1">
+          <a href="javascript:void(0)" class="btn btn-icon btn-primary"><i class="uil uil-facebook-f icons"></i></a>
+        </li>
+        <li class="list-inline-item mb-0 ms-1">
+          <a href="javascript:void(0)" class="btn btn-icon btn-primary"><i class="uil uil-github icons"></i></a>
+        </li>
+        <li class="list-inline-item mb-0 ms-1">
+          <a href="javascript:void(0)" class="btn btn-icon btn-primary"><i class="uil uil-twitter icons"></i></a>
+        </li>
+        <li class="list-inline-item mb-0 ms-1">
+          <a href="javascript:void(0)" class="btn btn-icon btn-primary"><i class="uil uil-linkedin-alt icons"></i></a>
+        </li>
+      </ul>
+
+      <ul class="buy-button list-inline mb-0" *ngIf="isdeveloper == true">
+        <li class="list-inline-item mb-0">
+          <div class="dropdown">
+            <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <i class="uil uil-search text-dark fs-5 align-middle pe-2"></i>
+            </button>
+            <div class="dropdown-menu dd-menu dropdown-menu-end bg-white shadow rounded border-0 mt-3 py-0"
+              style="width: 300px;">
+              <form>
+                <input type="text" id="text2" name="name" class="form-control border bg-white" placeholder="Search...">
+              </form>
+            </div>
+          </div>
+        </li>
+        <li class="list-inline-item mb-0 pe-2">
+          <a href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight" (click)="openright(content)">
+            <div class="btn btn-icon btn-soft-primary" id="settingbtn"><i-feather name="settings"
+                class="fea icon-sm"></i-feather></div>
+          </a>
+        </li>
+        <li class="list-inline-item mb-0">
+          <a href="javascript:void(0)" class="btn btn-icon btn-primary"><i class="uil uil-github icons"></i></a>
+        </li>
+        <!-- <li class="list-inline-item mb-0 pe-1">
+          <a href="javascript:void(0)" class="btn btn-icon btn-soft-primary"><i class="mdi mdi-stack-overflow mdi-18px icons"></i></a>
+        </li>
+        <li class="list-inline-item mb-0">
+          <a href="javascript:void(0)" class="btn btn-icon btn-soft-primary" (click)="developerModal(content)"
+            data-bs-toggle="modal" data-bs-target="#loginform"><i class="uil uil-user icons"></i></a>
+        </li> -->
+        <ng-template #content let-modal>
+          <div class="modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content rounded shadow-lg border-0 overflow-hidden position-relative">
+              <button type="button" class="btn-close position-absolute top-0 end-0 mt-2 me-2"
+                (click)="modal.dismiss('Cross click')" style="z-index: 1" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+              <div class="modal-body p-0">
+                <div class="container-fluid px-0">
+                  <div class="row align-items-center g-0">
+                    <div class="col-lg-6 col-md-5">
+                      <img src="assets/images/course/online/ab02.jpg" class="img-fluid" alt="">
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-6 col-md-7">
+                      <form class="login-form p-4">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="mb-3">
+                              <label class="form-label">Your Email <span class="text-danger">*</span></label>
+                              <div class="form-icon position-relative">
+                                <i-feather name="user" class="fea icon-sm icons"></i-feather>
+                                <input type="email" class="form-control ps-5" placeholder="Email" name="email"
+                                  required="">
+                              </div>
+                            </div>
+                          </div>
+                          <!--end col-->
+
+                          <div class="col-lg-12">
+                            <div class="mb-3">
+                              <label class="form-label">Password <span class="text-danger">*</span></label>
+                              <div class="form-icon position-relative">
+                                <i-feather name="key" class="fea icon-sm icons"></i-feather>
+                                <input type="password" class="form-control ps-5" placeholder="Password" required="">
+                              </div>
+                            </div>
+                          </div>
+                          <!--end col-->
+
+                          <div class="col-lg-12">
+                            <div class="d-flex justify-content-between">
+                              <div class="mb-3">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                  <label class="custom-control-label ms-1" for="customCheck1">Remember me</label>
+                                </div>
+                              </div>
+                              <p class="forgot-pass mb-0"><a routerLink="/auth-re-password"
+                                  class="text-dark fw-bold">Forgot password ?</a></p>
+                            </div>
+                          </div>
+                          <!--end col-->
+
+                          <div class="col-lg-12 mb-0">
+                            <div class="d-grid">
+                              <button class="btn btn-primary">Sign in</button>
+                            </div>
+                          </div>
+                          <!--end col-->
+
+                          <div class="col-12 text-center">
+                            <p class="mb-0 mt-3"><small class="text-dark me-2">Don't have an account ?</small> <a
+                                routerLink="/signup" class="text-dark fw-bold">Sign Up</a></p>
+                          </div>
+                          <!--end col-->
+                        </div>
+                        <!--end row-->
+                      </form>
+                    </div>
+                    <!--end col-->
+                  </div>
+                  <!--end row-->
+                </div>
+                <!--end container-->
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ul>
+
+      <a class="logo" routerLink="/index" *ngIf="navClass === 'nav-light'">
+        <img src="assets/images/logo-dark.png" class="l-dark" height="24" alt="">
+        <img src="assets/images/logo-light.png" class="l-light" height="24" alt="">
+      </a>
+    </div>
+
+    <span *ngIf="!buttonList && !isdeveloper && !shopPages && !Settingicon && Menuoption != 'cryptocurrency'">
+      <div class="buy-button">
+        <ng-template [ngIf]="navClass === 'nav-light'">
+          <a href="javascript: void(0);" class="btn btn-primary login-btn-primary">Buy Now</a>
+          <a href="javascript: void(0);" class="btn btn-light login-btn-light">Buy Now</a>
+        </ng-template>
+        <ng-template [ngIf]="navClass !== 'nav-light'">
+          <!-- <a href="javascript: void(0);" class="btn btn-primary">Buy Now</a> -->
+        </ng-template>
+      </div>
+    </span>
+    <!--end login button-->
+
+
+
+    <!--Login button Start-->
+    <ul class="buy-button list-inline mb-0" *ngIf="Settingicon == true && navClass === 'nav-light'">
+      <li class="list-inline-item ps-2 mb-0 login-btn-primary">
+        <a routerLink="/signin" target="_blank">
+          <div class="btn btn-icon-text btn-primary">Sign In</div>
+        </a>
+      </li>
+      <li class="list-inline-item ps-2 mb-0 login-btn-light">
+        <a routerLink="/dashboard">
+          <div class="btn btn-icon-text btn-light">Try Integra Now</div>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="buy-button list-inline mb-0" *ngIf="Settingicon == true && navClass !== 'nav-light'">
+      <li class="list-inline-item ps-2 mb-0">
+        <a routerLink="/signin">
+          <div class="btn btn-icon-text btn-primary" id="settingbtn">Sign In</div>
+        </a>
+      </li>
+      <li class="list-inline-item ps-1 mb-0">
+        <a routerLink="/dashboard">
+          <div class="btn btn-icon-text btn-primary" id="trybtn">Try Integra Now</div>
+        </a>
+      </li>
+    </ul>
+    <!--Login button End-->
+
+    <!--Login button Start-->
+    <ul class="buy-button list-inline mb-0" *ngIf="Menuoption == 'cryptocurrency'">
+      <li class="list-inline-item ps-1 mb-0">
+        <a routerLink="/signin">
+          <div class="btn btn-icon-text btn-primary" id="settingbtn">Sign In</div>
+        </a>
+      </li>
+      <li class="list-inline-item ps-1 mb-0">
+        <a routerLink="/dashboard">
+          <div class="btn btn-icon-text btn-primary" id="trybtn">Try Integra Now</div>
+        </a>
+      </li>
+    </ul>
+    <!--Login button End-->
+
+    <ul class="buy-button list-inline mb-0 app-header" *ngIf="appicons == true">
+      <li class="list-inline-item mb-0">
+        <a href="javascript:void(0)" class="btn btn-icon btn-light">
+          <img src="assets/images/app/app-store.png" class="avatar avatar-ex-small p-1" alt="">
+        </a>
+      </li>
+
+      <li class="list-inline-item mb-0 ps-2">
+        <a href="javascript:void(0)" class="btn btn-icon btn-light">
+          <img src="assets/images/app/play-store.png" class="avatar avatar-ex-small p-1" alt="">
+        </a>
+      </li>
+    </ul>
+
+    <ul class="buy-button list-inline mb-0" *ngIf="Nfticons == true">
+      <li class="list-inline-item mb-0">
+        <div class="dropdown">
+          <button type="button" class="btn dropdown-toggle p-0" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <!-- <i class="uil uil-search text-white title-dark btn-icon-light fs-5 align-middle"></i>
+                  <i class="uil uil-search text-dark btn-icon-dark fs-5 align-middle"></i> -->
+            <i class="uil uil-search text-dark fs-5 align-middle"></i>
+          </button>
+          <div class="dropdown-menu dd-menu dropdown-menu-end bg-white shadow rounded border-0 mt-3 p-0"
+            style="width: 300px;">
+            <div class="search-bar">
+              <div id="itemSearch" class="menu-search mb-0">
+                <form role="search" method="get" id="searchItemform" class="searchform">
+                  <input type="text" class="form-control border rounded" name="s" id="searchItem"
+                    placeholder="Search...">
+                  <input type="submit" id="searchItemsubmit" value="Search">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="list-inline-item ps-1 mb-0">
+        <a href="https://1.envato.market/landrick" target="_blank" class="btn btn-icon btn-pills btn-primary"><i
+            class="uil uil-wallet"></i></a>
+      </li>
+    </ul><!--end login button-->
+
+    <div id="navigation" *ngIf="Menuoption == 'center'">
+      <!-- Navigation Menu-->
+      <ul class="navigation-menu" [class]="navClass">
+        <li><a routerLink="/" class="nav-link-ref">Features</a></li>
+        <li><a routerLink="/corporate-pricing" class="nav-link-ref">Pricing</a></li>
+        <li><a routerLink="/" class="nav-link-ref">Resources</a></li>
+        <li><a routerLink="/" class="nav-link-ref">IntegraX</a></li>
+      </ul>
+
+      <!--end login button-->
+      <!--end login button-->
+    </div>
+    <!--end navigation-->
+
+    <div id="navigation" *ngIf="Menuoption == 'shop'">
+      <!-- Navigation Menu-->
+      <ul class="navigation-menu" [class]="navClass">
+        <li><a routerLink="/index-shop" class="nav-link-ref">Home</a></li>
+
+        <li><a routerLink="/shop-aboutus" class="nav-link-ref"> About Us</a></li>
+
+        <li class="has-submenu parent-menu-item">
+          <a href="javascript:void(0)">Shop</a><span class="menu-arrow"></span>
+          <ul class="submenu">
+            <li><a routerLink="/shop-fullwidth-grids" class="nav-link-ref">Fullwidth Grid</a></li>
+            <li><a routerLink="/shop-grids" class="nav-link-ref">Product Grids</a></li>
+            <li><a routerLink="/shop-fullwidth-lists" class="nav-link-ref">Fullwidth List</a></li>
+            <li><a routerLink="/shop-lists" class="nav-link-ref">Product List</a></li>
+            <li><a routerLink="/shop-product-detail" class="nav-link-ref">Product Details</a></li>
+            <li><a routerLink="/shop-cart" class="nav-link-ref">Shop Cart</a></li>
+            <li><a routerLink="/shop-checkouts" class="nav-link-ref">Checkouts</a></li>
+            <li><a routerLink="/shop-myaccount" class="nav-link-ref">My Account</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu parent-menu-item">
+          <a href="javascript:void(0)">Pages</a><span class="menu-arrow"></span>
+          <ul class="submenu">
+            <li><a routerLink="/signin" class="nav-link-ref">Login</a></li>
+            <li><a routerLink="/signup" class="nav-link-ref">Signup</a></li>
+            <li><a routerLink="/auth-re-password" class="nav-link-ref">Reset Password</a></li>
+            <li><a routerLink="/page-comingsoon" class="nav-link-ref">Coming Soon</a></li>
+            <li><a routerLink="/page-maintenance" class="nav-link-ref">Maintenance</a></li>
+            <li><a routerLink="/page-error" class="nav-link-ref">Error</a></li>
+            <li><a routerLink="/page-thankyou" class="nav-link-ref">Thank you</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu parent-menu-item">
+          <a href="javascript:void(0)">Blog</a><span class="menu-arrow"></span>
+          <ul class="submenu">
+            <li><a routerLink="/shop-blog" class="nav-link-ref">Blog Grid</a></li>
+            <li><a routerLink="/shop-blog-detail" class="nav-link-ref">Blog Detail</a></li>
+          </ul>
+        </li>
+      </ul><!--end navigation menu-->
+    </div><!--end navigation-->
+
+
+    <div id="navigation" *ngIf="Menuoption == 'blog'">
+      <!-- Navigation Menu-->
+      <ul class="navigation-menu" [class]="navClass">
+        <li><a routerLink="/index-blog" class="nav-link-ref">Home</a></li>
+
+        <li><a routerLink="/blog-about" class="nav-link-ref">About</a></li>
+
+        <li class="has-submenu parent-menu-item">
+          <a href="javascript:void(0)">Post</a><span class="menu-arrow"></span>
+          <ul class="submenu">
+            <li><a routerLink="/blog-standard-post" class="nav-link-ref">Standard Post</a></li>
+            <li><a routerLink="/blog-slider-post" class="nav-link-ref">Slider Post</a></li>
+            <li><a routerLink="/blog-gallery-post" class="nav-link-ref">Gallery Post</a></li>
+            <li><a routerLink="/blog-youtube-post" class="nav-link-ref">Youtube Post</a></li>
+            <li><a routerLink="/blog-vimeo-post" class="nav-link-ref">Vimeo Post</a></li>
+            <li><a routerLink="/blog-audio-post" class="nav-link-ref">Audio Post</a></li>
+            <li><a routerLink="/blog-blockquote-post" class="nav-link-ref">Blockquote</a></li>
+            <li><a routerLink="/blog-left-sidebar-post" class="nav-link-ref">Left Sidebar</a></li>
+          </ul>
+        </li>
+
+        <li><a href="javascript:void(0)" class="nav-link-ref">Lifestyle</a></li>
+
+        <li><a href="javascript:void(0)" class="nav-link-ref">Technology</a></li>
+      </ul><!--end navigation menu-->
+    </div><!--end navigation-->
+
+    <div id="navigation" *ngIf="Menuoption == 'corporate'">
+      <!-- Navigation Menu-->
+      <ul class="navigation-menu" [class]="navClass">
+        <li><a routerLink="/index-corporate" class="nav-link-ref">Home</a></li>
+        <li><a routerLink="/corporate-about" class="nav-link-ref"> About Us</a></li>
+        <li><a routerLink="/corporate-services" class="nav-link-ref">Services</a></li>
+        <li class="has-submenu parent-menu-item">
+          <a href="javascript:void(0)">Pages</a><span class="menu-arrow"></span>
+          <ul class="submenu">
+            <li><a routerLink="/corporate-team" class="nav-link-ref"> Team</a></li>
+            <li><a routerLink="/corporate-pricing" class="nav-link-ref">Pricing</a></li>
+            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Blog </a><span
+                class="submenu-arrow"></span>
+              <ul class="submenu">
+                <li><a routerLink="/corporate-blog" class="nav-link-ref"> Blog </a></li>
+                <li><a routerLink="/corporate-blog-detail" class="nav-link-ref">Blog Detail</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul><!--end navigation menu-->
+    </div><!--end navigation-->
+
+    <div id="navigation" *ngIf="Menuoption == 'cryptocurrency'">
+      <!-- Navigation Menu-->
+      <ul class="navigation-menu nav-right" [class]="navClass">
+        <li><a routerLink="/index-crypto" class="nav-link-ref">Home</a></li>
+        <li><a routerLink="/crypto-about" class="nav-link-ref"> About Us</a></li>
+        <li><a routerLink="/crypto-market" class="nav-link-ref">Market</a></li>
+        <li><a routerLink="/crypto-token" class="nav-link-ref"> Token</a></li>
+        <li class="has-submenu parent-parent-menu-item">
+          <a href="javascript:void(0)">Pages</a><span class="menu-arrow"></span>
+          <ul class="submenu">
+            <li><a routerLink="/crypto-services" class="nav-link-ref"> Features</a></li>
+            <li><a routerLink="/crypto-faqs" class="nav-link-ref">FAQs </a></li>
+            <li><a routerLink="/crypto-whitepaper" class="nav-link-ref">Whitepaper </a></li>
+            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Blog </a><span
+                class="submenu-arrow"></span>
+              <ul class="submenu">
+                <li><a routerLink="/crypto-blog" class="nav-link-ref"> Blog </a></li>
+                <li><a routerLink="/crypto-blog-detail" class="nav-link-ref">Blog Detail</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Auth pages </a><span
+                class="submenu-arrow"></span>
+              <ul class="submenu">
+                <li><a routerLink="/signin" class="nav-link-ref">Login</a></li>
+                <li><a routerLink="/signup" class="nav-link-ref">Signup</a></li>
+                <li><a routerLink="/auth-bs-reset" class="nav-link-ref">Reset Password</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul><!--end navigation menu-->
+    </div><!--end navigation-->
+
+    <div id="navigation" *ngIf="Menuoption == 'hosting'">
+      <!-- Navigation Menu-->
+      <ul class="navigation-menu" [class]="navClass">
+        <li><a routerLink="/index-hosting" class="nav-link-ref">Home</a></li>
+
+        <li><a routerLink="/hosting-domain" class="nav-link-ref">Domain</a></li>
+
+        <li class="has-submenu parent-menu-item">
+          <a href="javascript:void(0)">Hosting</a><span class="menu-arrow"></span>
+          <ul class="submenu">
+            <li><a routerLink="/hosting-shared" class="nav-link-ref">Shared Hosting</a></li>
+            <li><a routerLink="/workspace" class="nav-link-ref">Workspace</a></li>
+            <li><a routerLink="/hosting-dedicated" class="nav-link-ref">Dedicated Hosting</a></li>
+            <li><a routerLink="/hosting-cloud" class="nav-link-ref">Cloud Hosting</a></li>
+            <li><a routerLink="/hosting-reseller" class="nav-link-ref">Reseller Hosting</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu parent-parent-menu-item">
+          <a href="javascript:void(0)">Pages</a><span class="menu-arrow"></span>
+          <ul class="submenu">
+            <li><a routerLink="/hosting-aboutus" class="nav-link-ref"> About Us</a></li>
+            <li><a routerLink="/hosting-services" class="nav-link-ref"> Services</a></li>
+            <li><a routerLink="/hosting-faqs" class="nav-link-ref"> FAQs</a></li>
+            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Blog </a><span
+                class="submenu-arrow"></span>
+              <ul class="submenu">
+                <li><a routerLink="/hosting-blog" class="nav-link-ref"> Blogs </a></li>
+                <li><a routerLink="/hosting-blog-detail" class="nav-link-ref">Blog Details</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Auth pages </a><span
+                class="submenu-arrow"></span>
+              <ul class="submenu">
+                <li><a routerLink="/signin" class="nav-link-ref">Login</a></li>
+                <li><a routerLink="/signup" class="nav-link-ref">Signup</a></li>
+                <li><a routerLink="/auth-cover-re-password" class="nav-link-ref">Reset Password</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul><!--end navigation menu-->
+    </div><!--end navigation-->
+
+    <div id="navigation" *ngIf="Menuoption == 'job'">
+      <!-- Navigation Menu-->
+      <ul class="navigation-menu" [class]="navClass">
+        <li><a routerLink="/index-job" class="nav-link-ref">Home</a></li>
+
+        <li class="has-submenu parent-parent-menu-item">
+          <a href="javascript:void(0)">Jobs</a><span class="menu-arrow"></span>
+          <ul class="submenu">
+            <li><a routerLink="/job-list-one" class="nav-link-ref"> Job List One</a></li>
+            <li><a routerLink="/job-list-two" class="nav-link-ref"> Job List Two</a></li>
+            <li><a routerLink="/job-list-three" class="nav-link-ref"> Job List Three</a></li>
+            <li><a routerLink="/job-list-four" class="nav-link-ref"> Job List Four</a></li>
+            <li><a routerLink="/job-list-five" class="nav-link-ref"> Job List Five</a></li>
+            <li class="has-submenu parent-menu-item"><a href="javascript:void(0)"> Job Detail </a><span
+                class="submenu-arrow"></span>
+              <ul class="submenu">
+                <li><a routerLink="/job-detail-one" class="nav-link-ref"> Job Detail One</a></li>
+                <li><a routerLink="/job-detail-two" class="nav-link-ref"> Job Detail Two</a></li>
+                <li><a routerLink="/job-detail-three" class="nav-link-ref"> Job Detail Three</a></li>
+              </ul>
+            </li>
+            <li><a routerLink="/job-apply" class="nav-link-ref"> Job Apply</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu parent-menu-item">
+          <a href="javascript:void(0)">Candidate</a><span class="menu-arrow"></span>
+          <ul class="submenu">
+            <li><a routerLink="/job-candidate-list" class="nav-link-ref">Candidate Listing</a></li>
+            <li><a routerLink="/job-candidate" class="nav-link-ref">Candidate Detail</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu parent-menu-item">
+          <a href="javascript:void(0)">Company</a><span class="menu-arrow"></span>
+          <ul class="submenu">
+            <li><a routerLink="/job-company-list" class="nav-link-ref">Company Listing</a></li>
+            <li><a routerLink="/job-company" class="nav-link-ref">Company Detail</a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu parent-parent-menu-item">
+          <a href="javascript:void(0)">Pages</a><span class="menu-arrow"></span>
+          <ul class="submenu">
+            <li><a routerLink="/job-about" class="nav-link-ref">About us</a></li>
+            <li><a routerLink="/job-price" class="nav-link-ref">Pricing</a></li>
+            <li><a routerLink="/job-faqs" class="nav-link-ref">FAQs</a></li>
+            <li class="has-submenu parent-menu-item">
+              <a href="javascript:void(0)">Authentication</a><span class="submenu-arrow"></span>
+              <ul class="submenu">
+                <li><a routerLink="signin" class="nav-link-ref">Login</a></li>
+                <li><a routerLink="signup" class="nav-link-ref">Signup</a></li>
+                <li><a routerLink="auth-bs-reset" class="nav-link-ref">Reset Password</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul><!--end navigation menu-->
+    </div><!--end navigation-->
+
+    <div id="navigation" *ngIf="Menuoption == 'nft'">
+      <!-- Navigation Menu-->
+      <ul class="navigation-menu" [class]="navClass">
+        <li><a routerLink="/index-nft" class="nav-link-ref">Home</a></li>
+
+        <li><a routerLink="/nft-explore" class="nav-link-ref"> Explore</a></li>
+
+        <li><a routerLink="/nft-creators" class="nav-link-ref"> Creators</a></li>
+
+        <li class="has-submenu parent-menu-item">
+          <a href="javascript:void(0)">Pages</a><span class="menu-arrow"></span>
+          <ul class="submenu">
+            <li><a routerLink="/auth-login-bg-video" class="nav-link-ref">Login</a></li>
+            <li><a routerLink="/auth-signup-bg-video" class="nav-link-ref">Signup</a></li>
+            <li><a routerLink="/auth-reset-password-bg-video" class="nav-link-ref">Reset Password</a></li>
+            <li><a routerLink="/page-comingsoon" class="nav-link-ref">Coming Soon</a></li>
+            <li><a routerLink="/page-maintenance" class="nav-link-ref">Maintenance</a></li>
+            <li><a routerLink="/page-error" class="nav-link-ref">Error</a></li>
+            <li><a routerLink="/page-thankyou" class="nav-link-ref">Thank you</a></li>
+          </ul>
+        </li>
+
+        <li><a routerLink="/helpcenter-overview" class="nav-link-ref"> Help Center</a></li>
+
+        <li><a routerLink="/page-contact-one" class="nav-link-ref"> Contact</a></li>
+      </ul><!--end navigation menu-->
+    </div><!--end navigation-->
+
+    <div id="navigation" *ngIf="Menuoption == 'portfolio'">
+      <!-- Navigation Menu-->
+      <ul class="navigation-menu" [class]="navClass">
+        <li><a routerLink="/index-portfolio" class="nav-link-ref">Home</a></li>
+
+        <li class="has-submenu parent-parent-menu-item">
+          <a href="javascript:void(0)">Portfolio</a><span class="menu-arrow"></span>
+          <ul class="submenu megamenu">
+            <li>
+              <ul>
+                <li class="megamenu-head">Modern Portfolio</li>
+                <li><a routerLink="/portfolio-modern-two" class="nav-link-ref">Two Column</a></li>
+                <li><a routerLink="/portfolio-modern-three" class="nav-link-ref">Three Column</a></li>
+                <li><a routerLink="/portfolio-modern-four" class="nav-link-ref">Four Column</a></li>
+                <li><a routerLink="/portfolio-modern-five" class="nav-link-ref">Five Column</a></li>
+                <li><a routerLink="/portfolio-modern-six" class="nav-link-ref">Six Column</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <ul>
+                <li class="megamenu-head">Classic Portfolio</li>
+                <li><a routerLink="/portfolio-classic-two" class="nav-link-ref">Two Column</a></li>
+                <li><a routerLink="/portfolio-classic-three" class="nav-link-ref">Three Column</a></li>
+                <li><a routerLink="/portfolio-classic-four" class="nav-link-ref">Four Column</a></li>
+                <li><a routerLink="/portfolio-classic-five" class="nav-link-ref">Five Column</a></li>
+                <li><a routerLink="/portfolio-classic-six" class="nav-link-ref">Six Column</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <ul>
+                <li class="megamenu-head">Grid Portfolio</li>
+                <li><a routerLink="/portfolio-grid-two" class="nav-link-ref">Two Column</a></li>
+                <li><a routerLink="/portfolio-grid-three" class="nav-link-ref">Three Column</a></li>
+                <li><a routerLink="/portfolio-grid-four" class="nav-link-ref">Four Column</a></li>
+                <li><a routerLink="/portfolio-grid-five" class="nav-link-ref">Five Column</a></li>
+                <li><a routerLink="/portfolio-grid-six" class="nav-link-ref">Six Column</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <ul>
+                <li class="megamenu-head">Masonry Portfolio</li>
+                <li><a routerLink="/portfolio-masonry-two" class="nav-link-ref">Two Column</a></li>
+                <li><a routerLink="/portfolio-masonry-three" class="nav-link-ref">Three Column</a></li>
+                <li><a routerLink="/portfolio-masonry-four" class="nav-link-ref">Four Column</a></li>
+                <li><a routerLink="/portfolio-masonry-five" class="nav-link-ref">Five Column</a></li>
+                <li><a routerLink="/portfolio-masonry-six" class="nav-link-ref">Six Column</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <ul>
+                <li class="megamenu-head">Portfolio Detail</li>
+                <li><a routerLink="/portfolio-detail-one" class="nav-link-ref">Portfolio One</a></li>
+                <li><a routerLink="/portfolio-detail-two" class="nav-link-ref">Portfolio Two</a></li>
+                <li><a routerLink="/portfolio-detail-three" class="nav-link-ref">Portfolio Three</a></li>
+                <li><a routerLink="/portfolio-detail-four" class="nav-link-ref">Portfolio Four</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><a routerLink="/portfolio-about" class="nav-link-ref">About us</a></li>
+
+        <li><a routerLink="/portfolio-service" class="nav-link-ref">Services</a></li>
+      </ul><!--end navigation menu-->
+    </div>
+
+    <div id="navigation" *ngIf="Menuoption == 'help'">
+      <!-- Navigation Menu-->
+      <ul class="navigation-menu" [class]="navClass">
+        <li><a routerLink="/helpcenter-overview" class="nav-link-ref">Helpcenter</a></li>
+        <li><a routerLink="/helpcenter-faqs" class="nav-link-ref">FAQS</a></li>
+        <li><a routerLink="/helpcenter-guides" class="nav-link-ref">Guides</a></li>
+        <li><a routerLink="/helpcenter-support-request" class="nav-link-ref">Support</a></li>
+      </ul><!--end navigation menu-->
+    </div><!--end navigation-->
+
+  </div>
+  <!--end container-->
+</header>
+<!--end header-->
+<!-- Navbar End -->

@@ -1,0 +1,1261 @@
+<div *ngIf="!hideFooter">
+  <ng-template #execute_block>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="footer-py-60">
+              <div class="row">
+                <div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
+                  <a href="javascript:void(0)" class="logo-footer">
+                    <img src="assets/bootstrap/images/logo-light.png" height="24" alt="">
+                  </a>
+                  <p class="mt-4">Start working with Landrick that can provide everything you need to
+                    generate
+                    awareness, drive traffic, connect.</p>
+                  <ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">
+                    <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                        <i-feather name="facebook" class="fea icon-sm fea-social"></i-feather>
+                      </a></li>
+                    <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                        <i-feather name="instagram" class="fea icon-sm fea-social"></i-feather>
+                      </a></li>
+                    <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                        <i-feather name="twitter" class="fea icon-sm fea-social"></i-feather>
+                      </a></li>
+                    <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                        <i-feather name="linkedin" class="fea icon-sm fea-social"></i-feather>
+                      </a></li>
+                  </ul>
+                  <!--end icon-->
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                  <h5 class="footer-head">Products</h5>
+                  <ul class="list-unstyled footer-list mt-4">
+                    <li><a routerLink="/page-aboutus" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                        Features</a></li>
+                  </ul>
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                  <h5 class="footer-head">Plans</h5>
+                  <ul class="list-unstyled footer-list mt-4">
+                    <li><a routerLink="/page-terms" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                        Terms of Services</a></li>
+                    <li><a routerLink="/page-privacy" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                        Privacy Policy</a></li>
+                    <li><a routerLink="/page-pricing" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                        Pricing</a></li>
+                    <li><a routerLink="/changelog" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                        Academia</a></li>
+                    <li><a routerLink="/components" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                        Team</a></li>
+                    <li><a routerLink="/components" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                        Enterprise</a></li>
+                  </ul>
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                  <h5 class="footer-head">Company</h5>
+                  <ul class="list-unstyled footer-list mt-4">
+                    <li><a routerLink="/page-terms" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                        About IntegraX</a></li>
+                    <li><a routerLink="/page-privacy" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                        Contact Us</a></li>
+                    <li><a routerLink="/pricing" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                        Partner</a></li>
+                    <li><a routerLink="/changelog" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                        Ambassador</a></li>
+                    <li><a routerLink="/components" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                        Workshop</a></li>
+                    <li><a routerLink="/components" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                        Webinar</a></li>
+                  </ul>
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                  <h5 class="footer-head">Newsletter</h5>
+                  <p class="mt-4">Sign up and receive the latest tips via email.</p>
+                  <form [formGroup]="newsForm" (ngSubmit)="onSubmit()">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="foot-subscribe foot-white mb-3">
+                          <label class="form-label">Write your email <span class="text-danger">*</span></label>
+                          <div class="form-icon position-relative">
+                            <i-feather name="mail" class="fea icon-sm icons"></i-feather>
+                            <input type="email" name="email" id="emailsubscribe" class="form-control ps-5 rounded"
+                              placeholder="Your email : " required formControlName="email"
+                              [ngClass]="{ 'is-invalid': submitted && form['email'].errors }">
+                            <div *ngIf="submitted && form['email'].errors" class="invalid-feedback">
+                              <div *ngIf="form['email'].errors">Please Enter Email.</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--end col-->
+                      <div class="col-lg-12">
+                        <div class="d-grid">
+                          <input type="submit" id="submitsubscribe" name="send" class="btn btn-soft-primary"
+                            value="Subscribe">
+                        </div>
+                      </div>
+                      <!--end col-->
+                    </div>
+                    <!--end row-->
+                  </form>
+                </div>
+                <!--end col-->
+              </div>
+              <!--end row-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end container-->
+      <!--end footer-->
+      <div class="footer-py-30 footer-bar">
+        <div class="container text-center">
+          <div class="row align-items-center">
+            <div class="col-sm-6">
+              <div class="text-sm-start">
+                <p class="mb-0">©
+                  <script type="text/javascript" id="www-widgetapi-script"
+                    src="https://www.youtube.com/s/player/5d56cf74/www-widgetapi.vflset/www-widgetapi.js"
+                    async=""></script>
+                  <script id="iframe_api" src="https://www.youtube.com/iframe_api"></script> {{year}}
+                  Landrick. Design with <i class="mdi mdi-heart text-danger"></i> by <a href="javascript:void(0);"
+                    class="text-reset">Themesbrand</a>.
+                </p>
+              </div>
+            </div>
+            <!--end col-->
+
+            <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+              <ul class="list-unstyled text-sm-end mb-0">
+                <li class="list-inline-item"><a href="javascript:void(0)"><img
+                      src="assets/bootstrap/images/payments/american-ex.png" class="avatar avatar-ex-sm" title="American Express"
+                      alt=""></a></li>
+                <li class="list-inline-item ms-1"><a href="javascript:void(0)"><img
+                      src="assets/bootstrap/images/payments/discover.png" class="avatar avatar-ex-sm" title="Discover" alt=""></a>
+                </li>
+                <li class="list-inline-item ms-1"><a href="javascript:void(0)"><img
+                      src="assets/bootstrap/images/payments/master-card.png" class="avatar avatar-ex-sm" title="Master Card"
+                      alt=""></a></li>
+                <li class="list-inline-item ms-1"><a href="javascript:void(0)"><img
+                      src="assets/bootstrap/images/payments/paypal.png" class="avatar avatar-ex-sm" title="Paypal" alt=""></a>
+                </li>
+                <li class="list-inline-item ms-1"><a href="javascript:void(0)"><img
+                      src="assets/bootstrap/images/payments/visa.png" class="avatar avatar-ex-sm" title="Visa" alt=""></a></li>
+              </ul>
+            </div>
+            <!--end col-->
+          </div>
+          <!--end row-->
+        </div>
+        <!--end container-->
+      </div>
+      <!--end footer-->
+    </footer>
+  </ng-template>
+
+  <div *ngIf="footerVariant;else execute_block">
+    <div *ngIf="footerVariant == 'footer-two'">
+      <!-- Footer Start -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="footer-py-60">
+                <div class="row">
+                  <div class="col-lg-3 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
+                    <a href="javascript:void(0)" class="logo-footer">
+                      <img src="assets/bootstrap/images/logo-light.png" height="24" alt="">
+                    </a>
+                    <p class="mt-4">Start working with Landrick that can provide everything you.</p>
+                    <ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">
+                      <li class="list-inline-item"><a href="javascript:void(0)" class="rounded">
+                          <i-feather name="facebook" class="fea icon-sm fea-social"></i-feather></a></li>
+                      <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                          <i-feather name="instagram" class="fea icon-sm fea-social"></i-feather></a>
+                      </li>
+                      <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                          <i-feather name="twitter" class="fea icon-sm fea-social"></i-feather></a></li>
+                      <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                          <i-feather name="linkedin" class="fea icon-sm fea-social"></i-feather></a></li>
+                    </ul><!--end icon-->
+                  </div><!--end col-->
+
+                  <div class="col-lg-6">
+                    <div class="row">
+                      <div class="col-12 mb-4 pb-2">
+                        <h5 class="footer-head mb-0">Shopping & Clothes</h5>
+                      </div><!--end col-->
+
+                      <div class="col-lg-4 col-md-4 col-12">
+                        <ul class="list-unstyled footer-list">
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              Men</a></li>
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              Jackets & Coats
+                            </a>
+                          </li>
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              Jeans </a></li>
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              Loungewear </a>
+                          </li>
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              Polo shirts </a>
+                          </li>
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              Shirts</a></li>
+                        </ul>
+                      </div><!--end col-->
+
+                      <div class="col-lg-4 col-md-4 col-12 mt-2 mt-sm-0">
+                        <ul class="list-unstyled footer-list">
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              Shorts </a></li>
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              Suits Swimwear
+                            </a>
+                          </li>
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              T-shirts </a>
+                          </li>
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              Tracksuits </a>
+                          </li>
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              Trousers</a>
+                          </li>
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              Shirts</a></li>
+                        </ul>
+                      </div><!--end col-->
+
+                      <div class="col-lg-4 col-md-4 col-12 mt-2 mt-sm-0">
+                        <ul class="list-unstyled footer-list">
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              My account </a>
+                          </li>
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              Order History
+                            </a>
+                          </li>
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              Wish List </a>
+                          </li>
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              Newsletter</a>
+                          </li>
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              Affiliate</a>
+                          </li>
+                          <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                              Returns</a></li>
+                        </ul>
+                      </div><!--end col-->
+                    </div><!--end row-->
+                  </div><!--end col-->
+
+                  <div class="col-lg-3 col-md-6 col-12 mt-4 mt-lg-0 pt-2 pt-lg-0">
+                    <h5 class="footer-head">Newsletter</h5>
+                    <p class="mt-4">Sign up and receive the latest tips via email.</p>
+                    <form [formGroup]="newsForm" (ngSubmit)="onSubmit()">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="foot-subscribe mb-3">
+                            <label class="form-label">Write your email <span class="text-danger">*</span></label>
+                            <div class="form-icon position-relative">
+                              <i-feather name="mail" class="fea icon-sm icons"></i-feather>
+                              <input type="email" name="email" id="emailsubscribe" class="form-control ps-5 rounded"
+                                placeholder="Your email : " required formControlName="email"
+                                [ngClass]="{ 'is-invalid': submitted && form['email'].errors }">
+                              <div *ngIf="submitted && form['email'].errors" class="invalid-feedback">
+                                <div *ngIf="form['email'].errors">Please Enter Email.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="d-grid">
+                            <input type="submit" id="submitsubscribe" name="send" class="btn btn-soft-primary"
+                              value="Subscribe">
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div><!--end col-->
+                </div><!--end row-->
+              </div>
+            </div><!--end col-->
+          </div><!--end row-->
+        </div><!--end container-->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="footer-py-30 footer-border">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="d-flex align-items-center justify-content-center">
+                        <i class="uil uil-truck align-middle h5 mb-0 me-2"></i>
+                        <h6 class="mb-0">Free delivery</h6>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                      <div class="d-flex align-items-center justify-content-center">
+                        <i class="uil uil-archive align-middle h5 mb-0 me-2"></i>
+                        <h6 class="mb-0">Non-contact shipping</h6>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                      <div class="d-flex align-items-center justify-content-center">
+                        <i class="uil uil-transaction align-middle h5 mb-0 me-2"></i>
+                        <h6 class="mb-0">Money-back quarantee</h6>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                      <div class="d-flex align-items-center justify-content-center">
+                        <i class="uil uil-shield-check align-middle h5 mb-0 me-2"></i>
+                        <h6 class="mb-0">Secure payments</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="footer-py-30 footer-border">
+                <div class="container text-center">
+                  <div class="row align-items-center">
+                    <div class="col-sm-6">
+                      <div class="text-sm-start">
+                        <p class="mb-0">©
+                          {{year}} Landrick.
+                          Design with <i class="mdi mdi-heart text-danger"></i> by
+                          <a href="javascript:void(0)" class="text-reset">Themesbrand</a>.
+                        </p>
+                      </div>
+                    </div><!--end col-->
+
+                    <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                      <ul class="list-unstyled text-sm-end mb-0">
+                        <li class="list-inline-item"><a href="javascript:void(0)"><img
+                              src="assets/bootstrap/images/payments/american-ex.png" class="avatar avatar-ex-sm"
+                              title="American Express" alt=""></a>
+                        </li>
+                        <li class="list-inline-item"><a href="javascript:void(0)"><img
+                              src="assets/bootstrap/images/payments/discover.png" class="avatar avatar-ex-sm" title="Discover"
+                              alt=""></a>
+                        </li>
+                        <li class="list-inline-item"><a href="javascript:void(0)"><img
+                              src="assets/bootstrap/images/payments/master-card.png" class="avatar avatar-ex-sm"
+                              title="Master Card" alt=""></a>
+                        </li>
+                        <li class="list-inline-item"><a href="javascript:void(0)"><img
+                              src="assets/bootstrap/images/payments/paypal.png" class="avatar avatar-ex-sm" title="Paypal"
+                              alt=""></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)"><img
+                              src="assets/bootstrap/images/payments/visa.png" class="avatar avatar-ex-sm" title="Visa" alt=""></a>
+                        </li>
+                      </ul>
+                    </div><!--end col-->
+                  </div><!--end row-->
+                </div><!--end container-->
+              </div>
+            </div>
+          </div>
+        </div><!--end container-->
+      </footer>
+      <!-- Footer End -->
+    </div>
+
+    <div *ngIf="footerVariant == 'footer-three'">
+      <!-- Footer Start -->
+      <footer class="footer">
+        <div class="py-5">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <div class="section-title">
+                  <div class="d-flex">
+                    <i class="uil uil-envelope-star display-4 text-white title-dark"></i>
+                    <div class="flex-1 ms-md-4 ms-3">
+                      <h4 class="fw-bold text-white mb-1">Subscribe to our newsletters</h4>
+                      <p class="text-white-50 mb-0">Sign up and receive the latest tips via email.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 mt-4 mt-sm-0">
+                <div class="text-md-end ms-5 ms-sm-0">
+                  <a href="javascript:void(0)" class="btn btn-primary">Subscribe Now</a>
+                </div>
+              </div><!--end col-->
+            </div><!--end row-->
+          </div><!--end container-->
+        </div><!--end div-->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="footer-py-60 footer-border">
+                <div class="row">
+                  <div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
+                    <a href="javascript:void(0)" class="logo-footer">
+                      <img src="assets/bootstrap/images/logo-light.png" height="24" alt="">
+                    </a>
+                    <p class="mt-4">Start working with Landrick that can provide everything you need
+                      to
+                      generate awareness, drive traffic, connect.</p>
+                    <ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">
+                      <li class="list-inline-item"><a href="javascript:void(0)" class="rounded">
+                          <i-feather name="facebook" class="fea icon-sm fea-social"></i-feather></a></li>
+                      <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                          <i-feather name="instagram" class="fea icon-sm fea-social"></i-feather></a>
+                      </li>
+                      <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                          <i-feather name="twitter" class="fea icon-sm fea-social"></i-feather></a></li>
+                      <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                          <i-feather name="linkedin" class="fea icon-sm fea-social"></i-feather></a></li>
+                    </ul><!--end icon-->
+                  </div><!--end col-->
+
+                  <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <h5 class="footer-head">Company</h5>
+                    <ul class="list-unstyled footer-list mt-4">
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          About us</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Services</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Team</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Pricing</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Project</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Careers</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Blog</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Login</a></li>
+                    </ul>
+                  </div><!--end col-->
+
+                  <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <h5 class="footer-head">Usefull Links</h5>
+                    <ul class="list-unstyled footer-list mt-4">
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Terms of Services</a>
+                      </li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Privacy Policy</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Documentation</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Changelog</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Components</a></li>
+                    </ul>
+                  </div><!--end col-->
+
+                  <div class="col-lg-4 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <h5 class="text-light footer-head">Start project with Landrick</h5>
+
+                    <ul class="list-unstyled footer-list mt-4 mb-2">
+                      <li class="list-inline-item mx-1"><a href="javascript:void(0)"
+                          class="btn btn-soft-primary">Signin</a></li>
+                      <li class="list-inline-item mx-1"><a href="javascript:void(0)" class="btn btn-primary">Signup</a>
+                      </li>
+                    </ul>
+                    <small class="d-block">Are you developer ? <a href="javascript:void(0)"
+                        class="text-foot fw-medium">Learn More <i class="uil uil-arrow-right"></i></a></small>
+
+                    <img src="assets/bootstrap/images/logo-icon.png" class="avatar avatar-small mt-4" alt="">
+                  </div><!--end col-->
+                </div><!--end row-->
+              </div>
+            </div><!--end col-->
+          </div><!--end row-->
+        </div><!--end container-->
+
+        <div class="footer-py-30 footer-bar">
+          <div class="container text-center">
+            <div class="row align-items-center">
+              <div class="col-sm-6">
+                <div class="text-sm-start">
+                  <p class="mb-0">©
+                    {{year}} Landrick. Design with <i class="mdi mdi-heart text-danger"></i> by
+                    <a href="javascript:void(0)" class="text-reset">Themesbrand</a>.
+                  </p>
+                </div>
+              </div><!--end col-->
+
+              <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <ul class="list-unstyled text-sm-end mb-0">
+                  <li class="list-inline-item"><a href="javascript:void(0)"><img
+                        src="assets/bootstrap/images/payments/american-ex.png" class="avatar avatar-ex-sm"
+                        title="American Express" alt=""></a></li>
+                  <li class="list-inline-item"><a href="javascript:void(0)"><img
+                        src="assets/bootstrap/images/payments/discover.png" class="avatar avatar-ex-sm" title="Discover"
+                        alt=""></a></li>
+                  <li class="list-inline-item"><a href="javascript:void(0)"><img
+                        src="assets/bootstrap/images/payments/master-card.png" class="avatar avatar-ex-sm" title="Master Card"
+                        alt=""></a></li>
+                  <li class="list-inline-item"><a href="javascript:void(0)"><img src="assets/bootstrap/images/payments/paypal.png"
+                        class="avatar avatar-ex-sm" title="Paypal" alt=""></a></li>
+                  <li class="list-inline-item"><a href="javascript:void(0)"><img src="assets/bootstrap/images/payments/visa.png"
+                        class="avatar avatar-ex-sm" title="Visa" alt=""></a></li>
+                </ul>
+              </div><!--end col-->
+            </div><!--end row-->
+          </div><!--end container-->
+        </div>
+      </footer>
+      <!-- Footer End -->
+    </div>
+
+    <div *ngIf="footerVariant == 'footer-four'">
+      <!-- Footer Start -->
+      <footer class="footer"
+        style="background-image: url('assets/bootstrap/images/svg-map.svg'); background-repeat: no-repeat; background-position: center;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 py-lg-5">
+              <div class="footer-py-60 text-center">
+                <a href="javascript:void(0)" class="logo-footer">
+                  <img src="assets/bootstrap/images/logo-light.png" height="32" alt="">
+                </a>
+                <p class="mt-4 para-desc mx-auto">Start working with Landrick that can provide
+                  everything
+                  you need to generate awareness, drive traffic, connect.</p>
+                <ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">
+                  <li class="list-inline-item"><a href="javascript:void(0)" class="rounded">
+                      <i-feather name="facebook" class="fea icon-sm fea-social"></i-feather></a>
+                  </li>
+                  <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                      <i-feather name="instagram" class="fea icon-sm fea-social"></i-feather></a>
+                  </li>
+                  <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                      <i-feather name="twitter" class="fea icon-sm fea-social"></i-feather></a>
+                  </li>
+                  <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                      <i-feather name="linkedin" class="fea icon-sm fea-social"></i-feather></a>
+                  </li>
+                </ul><!--end icon-->
+              </div>
+            </div><!--end col-->
+          </div><!--end row-->
+        </div><!--end container-->
+
+        <div class="footer-py-30 footer-bar bg-footer">
+          <div class="container text-center">
+            <div class="row justify-content-center">
+              <div class="col-12">
+                <div class="text-center">
+                  <p class="mb-0">©
+                    {{year}} Landrick. Design with <i class="mdi mdi-heart text-danger"></i> by
+                    <a href="javascript:void(0)" class="text-reset">Themesbrand</a>.
+                  </p>
+                </div>
+              </div><!--end col-->
+            </div><!--end row-->
+          </div><!--end container-->
+        </div>
+      </footer>
+      <!-- Footer End -->
+    </div>
+
+    <div *ngIf="footerVariant == 'footer-five'">
+      <!-- Footer Start -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="footer-py-60 text-center">
+                <div class="row py-5">
+                  <div class="col-md-4">
+                    <div class="card border-0 text-center features feature-primary feature-clean bg-transparent">
+                      <div class="icons text-center mx-auto">
+                        <i class="uil uil-phone d-block rounded h3 mb-0"></i>
+                      </div>
+                      <div class="content mt-4">
+                        <h5 class="footer-head">Phone</h5>
+                        <p class="text-muted">Start working with Landrick that can provide
+                          everything</p>
+                        <a href="tel:+152534-468-854" class="text-foot">+152 534-468-854</a>
+                      </div>
+                    </div>
+                  </div><!--end col-->
+
+                  <div class="col-md-4 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <div class="card border-0 text-center features feature-primary feature-clean bg-transparent">
+                      <div class="icons text-center mx-auto">
+                        <i class="uil uil-envelope d-block rounded h3 mb-0"></i>
+                      </div>
+                      <div class="content mt-4">
+                        <h5 class="footer-head">Email</h5>
+                        <p class="text-muted">Start working with Landrick that can provide
+                          everything</p>
+                      </div>
+                    </div>
+                  </div><!--end col-->
+
+                  <div class="col-md-4 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <div class="card border-0 text-center features feature-primary feature-clean bg-transparent">
+                      <div class="icons text-center mx-auto">
+                        <i class="uil uil-map-marker d-block rounded h3 mb-0"></i>
+                      </div>
+                      <div class="content mt-4">
+                        <h5 class="footer-head">Location</h5>
+                        <p class="text-muted">C/54 Northwest Freeway, Suite 558, <br>Houston,
+                          USA
+                          485</p>
+                        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin"
+                          data-type="iframe" class="video-play-icon text-foot lightbox">View
+                          on
+                          Google map</a>
+                      </div>
+                    </div>
+                  </div><!--end col-->
+                </div><!--end row-->
+              </div>
+            </div><!--end col-->
+          </div><!--end row-->
+        </div><!--end container-->
+
+        <div class="footer-py-30 footer-bar bg-footer">
+          <div class="container text-center">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-lg-3 col-md-2 col-sm-3">
+                <div class="text-sm-start">
+                  <a href="javascript:void(0)" class="logo-footer">
+                    <img src="assets/bootstrap/images/logo-icon.png" height="34" alt="">
+                  </a>
+                </div>
+              </div><!--end col-->
+
+              <div class="col-lg-6 col-md-6 col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <ul class="list-unstyled footer-list terms-service mb-0">
+                  <li class="list-inline-item mb-0"><a href="javascript:void(0)" class="text-foot me-2">Privacy</a></li>
+                  <li class="list-inline-item mb-0"><a href="javascript:void(0)" class="text-foot me-2">Terms</a></li>
+                  <li class="list-inline-item mb-0"><a href="javascript:void(0)" class="text-foot me-2">FAQs</a></li>
+                  <li class="list-inline-item mb-0"><a href="javascript:void(0)" class="text-foot">Contact</a></li>
+                </ul>
+              </div><!--end col-->
+
+              <div class="col-lg-3 col-md-4 col-sm-3 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <div class="text-sm-end">
+                  <p class="mb-0 text-foot">©
+                    {{year}}
+                    <a href="javascript:void(0)" class="text-reset">Themesbrand</a>.
+                  </p>
+                </div>
+              </div><!--end col-->
+            </div><!--end row-->
+          </div><!--end container-->
+        </div>
+      </footer>
+      <!-- Footer End -->
+    </div>
+
+    <div *ngIf="footerVariant == 'bg-light'">
+      <!-- Footer Start -->
+      <footer class="footer bg-light">
+        <div class="container">
+          <div class="row footer-py-60">
+            <div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
+              <a href="javascript:void(0)" class="logo-footer">
+                <img src="assets/bootstrap/images/logo-dark.png" height="24" alt="">
+              </a>
+              <p class="mt-4 text-muted">Start working with Landrick that can provide everything you need
+                to
+                generate awareness, drive traffic, connect.</p>
+              <ul class="list-unstyled social-icon social mb-0 mt-4">
+                <li class="list-inline-item"><a href="javascript:void(0)" class="rounded">
+                    <i-feather name="facebook" class="fea icon-sm fea-social"></i-feather>
+                  </a></li>
+                <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                    <i-feather name="instagram" class="fea icon-sm fea-social"></i-feather>
+                  </a></li>
+                <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                    <i-feather name="twitter" class="fea icon-sm fea-social"></i-feather>
+                  </a></li>
+                <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                    <i-feather name="linkedin" class="fea icon-sm fea-social"></i-feather>
+                  </a></li>
+              </ul>
+              <!--end icon-->
+            </div>
+            <!--end col-->
+
+            <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+              <h5 class="text-dark footer-head">Company</h5>
+              <ul class="list-unstyled footer-list mt-4">
+                <li><a routerLink="/page-aboutus" class="text-muted"><i class="uil uil-angle-right-b me-1"></i>
+                    About us</a></li>
+                <li><a routerLink="/page-services" class="text-muted"><i class="uil uil-angle-right-b me-1"></i>
+                    Services</a></li>
+                <li><a routerLink="/page-team" class="text-muted"><i class="uil uil-angle-right-b me-1"></i>
+                    Team</a></li>
+                <li><a routerLink="/page-pricing" class="text-muted"><i class="uil uil-angle-right-b me-1"></i>
+                    Pricing</a></li>
+                <li><a routerLink="/portfolio-modern-three" class="text-muted"><i
+                      class="uil uil-angle-right-b me-1"></i> Project</a></li>
+                <li><a routerLink="/page-jobs" class="text-muted"><i class="uil uil-angle-right-b me-1"></i>
+                    Careers</a></li>
+                <li><a routerLink="/page-blog-grid" class="text-muted"><i class="uil uil-angle-right-b me-1"></i>
+                    Blog</a></li>
+                <li><a routerLink="/auth-cover-login" class="text-muted"><i class="uil uil-angle-right-b me-1"></i>
+                    Login</a></li>
+              </ul>
+            </div>
+            <!--end col-->
+
+            <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+              <h5 class="text-dark footer-head">Usefull Links</h5>
+              <ul class="list-unstyled footer-list mt-4">
+                <li><a routerLink="/page-terms" class="text-muted"><i class="uil uil-angle-right-b me-1"></i>
+                    Terms of Services</a></li>
+                <li><a routerLink="/page-privacy" class="text-muted"><i class="uil uil-angle-right-b me-1"></i>
+                    Privacy Policy</a></li>
+                <li><a routerLink="/documentation" class="text-muted"><i class="uil uil-angle-right-b me-1"></i>
+                    Documentation</a></li>
+                <li><a routerLink="/changelog" class="text-muted"><i class="uil uil-angle-right-b me-1"></i>
+                    Changelog</a></li>
+                <li><a routerLink="/components" class="text-muted"><i class="uil uil-angle-right-b me-1"></i>
+                    Components</a></li>
+              </ul>
+            </div>
+            <!--end col-->
+
+            <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+              <h5 class="text-dark footer-head">Newsletter</h5>
+              <p class="mt-4 text-muted">Sign up and receive the latest tips via email.</p>
+
+              <form [formGroup]="newsForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="foot-subscribe foot-white mb-3">
+                      <label class="form-label">Write your email <span class="text-danger">*</span></label>
+                      <div class="form-icon position-relative">
+                        <i-feather name="mail" class="fea icon-sm icons"></i-feather>
+                        <input type="email" name="email" id="emailsubscribe" class="form-control ps-5 rounded"
+                          placeholder="Your email : " required formControlName="email"
+                          [ngClass]="{ 'is-invalid': submitted && form['email'].errors }">
+                        <div *ngIf="submitted && form['email'].errors" class="invalid-feedback">
+                          <div *ngIf="form['email'].errors">Please Enter Email.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--end col-->
+                  <div class="col-lg-12">
+                    <div class="d-grid">
+                      <input type="submit" id="submitsubscribe" name="send" class="btn btn-primary" value="Subscribe">
+                    </div>
+                  </div>
+                  <!--end col-->
+                </div>
+                <!--end row-->
+              </form>
+            </div>
+            <!--end col-->
+          </div>
+          <!--end row-->
+        </div>
+        <!--end container-->
+        <div class="footer-py-30 bg-footer text-white-50 border-top">
+          <div class="container text-center">
+            <div class="row align-items-center">
+              <div class="col-sm-6">
+                <div class="text-sm-start">
+                  <p class="mb-0">©
+                    <script type="text/javascript" id="www-widgetapi-script"
+                      src="https://www.youtube.com/s/player/5d56cf74/www-widgetapi.vflset/www-widgetapi.js"
+                      async=""></script>
+                    <script id="iframe_api" src="https://www.youtube.com/iframe_api"></script>
+                    {{year}}
+                    Landrick. Design with <i class="mdi mdi-heart text-danger"></i> by
+                    <a href="javascript:void(0);" class="text-reset">Themesbrand</a>.
+                  </p>
+                </div>
+              </div>
+              <!--end col-->
+
+              <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <ul class="list-unstyled text-sm-end mb-0">
+                  <li class="list-inline-item"><a href="javascript:void(0)"><img
+                        src="assets/bootstrap/images/payments/american-ex.png" class="avatar avatar-ex-sm"
+                        title="American Express" alt=""></a></li>
+                  <li class="list-inline-item ms-1"><a href="javascript:void(0)"><img
+                        src="assets/bootstrap/images/payments/discover.png" class="avatar avatar-ex-sm" title="Discover"
+                        alt=""></a></li>
+                  <li class="list-inline-item ms-1"><a href="javascript:void(0)"><img
+                        src="assets/bootstrap/images/payments/master-card.png" class="avatar avatar-ex-sm" title="Master Card"
+                        alt=""></a></li>
+                  <li class="list-inline-item ms-1"><a href="javascript:void(0)"><img
+                        src="assets/bootstrap/images/payments/paypal.png" class="avatar avatar-ex-sm" title="Paypal" alt=""></a>
+                  </li>
+                  <li class="list-inline-item ms-1"><a href="javascript:void(0)"><img
+                        src="assets/bootstrap/images/payments/visa.png" class="avatar avatar-ex-sm" title="Visa" alt=""></a></li>
+                </ul>
+              </div>
+              <!--end col-->
+            </div>
+            <!--end row-->
+          </div>
+          <!--end container-->
+        </div>
+        <!--end footer-->
+      </footer>
+      <!-- Footer End -->
+    </div>
+
+    <div *ngIf="footerVariant == 'footer-seven'">
+      <!-- Footer Start -->
+      <footer class="footer footer-bar">
+        <div class="footer-py-30">
+          <div class="container text-center">
+            <div class="row align-items-center">
+              <div class="col-sm-6">
+                <div class="text-sm-start">
+                  <p class="mb-0">©
+                    {{year}} Landrick. Design with <i class="mdi mdi-heart text-danger"></i> by
+                    <a href="javascript:void(0)" class="text-reset">Themesbrand</a>.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <ul class="list-unstyled social-icon foot-social-icon text-sm-end mb-0">
+                  <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                      <i-feather name="facebook" class="fea icon-sm fea-social"></i-feather></a>
+                  </li>
+                  <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                      <i-feather name="instagram" class="fea icon-sm fea-social"></i-feather></a>
+                  </li>
+                  <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                      <i-feather name="twitter" class="fea icon-sm fea-social"></i-feather></a>
+                  </li>
+                  <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                      <i-feather name="linkedin" class="fea icon-sm fea-social"></i-feather></a>
+                  </li>
+                </ul><!--end icon-->
+              </div><!--end col-->
+            </div><!--end row-->
+          </div><!--end container-->
+        </div>
+      </footer>
+      <!-- Footer End -->
+    </div>
+
+    <div *ngIf="footerVariant == 'footer-eight'">
+      <!-- Footer Start -->
+      <footer class="footer footer-bar">
+        <div class="footer-py-30">
+          <div class="container text-center">
+            <div class="row align-items-center">
+              <div class="col-sm-3">
+                <div class="text-sm-start">
+                  <a href="javascript:void(0)" class="logo-footer">
+                    <img src="assets/bootstrap/images/logo-light.png" height="24" alt="">
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <div class="text-center">
+                  <p class="mb-0">©
+                    {{year}} Landrick. Design with <i class="mdi mdi-heart text-danger"></i> by
+                    <a href="javascript:void(0)" class="text-reset">Themesbrand</a>.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-sm-3 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <ul class="list-unstyled social-icon foot-social-icon text-sm-end mb-0">
+                  <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                      <i-feather name="facebook" class="fea icon-sm fea-social"></i-feather></a>
+                  </li>
+                  <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                      <i-feather name="instagram" class="fea icon-sm fea-social"></i-feather></a>
+                  </li>
+                  <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                      <i-feather name="twitter" class="fea icon-sm fea-social"></i-feather></a>
+                  </li>
+                  <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                      <i-feather name="linkedin" class="fea icon-sm fea-social"></i-feather></a>
+                  </li>
+                </ul><!--end icon-->
+              </div><!--end col-->
+            </div><!--end row-->
+          </div><!--end container-->
+        </div>
+      </footer>
+      <!-- Footer End -->
+    </div>
+
+    <div *ngIf="footerVariant == 'footer-nine'">
+      <!-- Footer Start -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="footer-py-60">
+                <div class="row">
+                  <div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
+                    <p>Start working with Landrick that can provide everything you need to generate
+                      awareness, drive traffic, connect.</p>
+                    <ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">
+                      <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                          <i-feather name="facebook" class="fea icon-sm fea-social"></i-feather></a></li>
+                      <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                          <i-feather name="instagram" class="fea icon-sm fea-social"></i-feather></a>
+                      </li>
+                      <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                          <i-feather name="twitter" class="fea icon-sm fea-social"></i-feather></a></li>
+                      <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded">
+                          <i-feather name="linkedin" class="fea icon-sm fea-social"></i-feather></a></li>
+                    </ul><!--end icon-->
+                  </div><!--end col-->
+
+                  <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <h5 class="footer-head">Company</h5>
+                    <ul class="list-unstyled footer-list mt-4">
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          About us</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Services</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Team</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Pricing</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Project</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Careers</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Blog</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Login</a></li>
+                    </ul>
+                  </div><!--end col-->
+
+                  <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <h5 class="footer-head">Usefull Links</h5>
+                    <ul class="list-unstyled footer-list mt-4">
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Terms of Services</a>
+                      </li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Privacy Policy</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Documentation</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Changelog</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Components</a></li>
+                    </ul>
+                  </div><!--end col-->
+
+                  <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <h5 class="footer-head">Newsletter</h5>
+                    <p class="mt-4">Sign up and receive the latest tips via email.</p>
+                    <form [formGroup]="newsForm" (ngSubmit)="onSubmit()">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="foot-subscribe mb-3">
+                            <label class="form-label">Write your email <span class="text-danger">*</span></label>
+                            <div class="form-icon position-relative">
+                              <i-feather name="mail" class="fea icon-sm icons"></i-feather>
+                              <input type="email" name="email" id="emailsubscribe" class="form-control ps-5 rounded"
+                                placeholder="Your email : " required formControlName="email"
+                                [ngClass]="{ 'is-invalid': submitted && form['email'].errors }">
+                              <div *ngIf="submitted && form['email'].errors" class="invalid-feedback">
+                                <div *ngIf="form['email'].errors">Please Enter Email.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="d-grid">
+                            <input type="submit" id="submitsubscribe" name="send" class="btn btn-soft-primary"
+                              value="Subscribe">
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div><!--end col-->
+                </div><!--end row-->
+              </div>
+            </div><!--end col-->
+          </div><!--end row-->
+        </div><!--end container-->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="footer-py-30 footer-border">
+                <div class="container text-center">
+                  <div class="row align-items-center">
+                    <div class="col-sm-6">
+                      <div class="text-sm-start">
+                        <a href="javascript:void(0)" class="logo-footer">
+                          <img src="assets/bootstrap/images/logo-light.png" height="24" alt="">
+                        </a>
+                      </div>
+                    </div><!--end col-->
+
+                    <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                      <ul class="list-unstyled footer-list terms-service text-sm-end mb-0">
+                        <li class="list-inline-item ms-1"><a href="javascript:void(0)"
+                            class="text-foot me-2">Privacy</a></li>
+                        <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="text-foot me-2">Terms</a>
+                        </li>
+                        <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="text-foot me-2">FAQs</a>
+                        </li>
+                        <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="text-foot">Contact</a>
+                        </li>
+                      </ul>
+                    </div><!--end col-->
+                  </div><!--end row-->
+                </div><!--end container-->
+              </div>
+            </div><!--end col-->
+          </div><!--end row-->
+        </div><!--end container-->
+
+        <div class="footer-py-30 footer-border">
+          <div class="container text-center">
+            <div class="row justify-content-center">
+              <div class="col-sm-12">
+                <p class="mb-0">©
+                  {{year}} Landrick. Design with <i class="mdi mdi-heart text-danger"></i> by
+                  <a href="javascript:void(0)" class="text-reset">Themesbrand</a>.
+                </p>
+              </div><!--end col-->
+            </div><!--end row-->
+          </div><!--end container-->
+        </div><!--end container-->
+      </footer>
+      <!-- Footer End -->
+    </div>
+
+    <div *ngIf="footerVariant == 'footer-ten'">
+      <!-- Footer Start -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="footer-py-60 text-center">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card border-0 text-center features feature-primary feature-clean bg-transparent">
+                      <div class="icons text-center mx-auto">
+                        <i class="uil uil-phone d-block rounded h3 mb-0"></i>
+                      </div>
+                      <div class="content mt-4">
+                        <h5 class="footer-head">Phone</h5>
+                        <p class="text-muted">Start working with Landrick that can provide
+                          everything</p>
+                        <a href="tel:+152534-468-854" class="text-foot">+152 534-468-854</a>
+                      </div>
+                    </div>
+                  </div><!--end col-->
+
+                  <div class="col-md-4 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <div class="card border-0 text-center features feature-primary feature-clean bg-transparent">
+                      <div class="icons text-center mx-auto">
+                        <i class="uil uil-envelope d-block rounded h3 mb-0"></i>
+                      </div>
+                      <div class="content mt-4">
+                        <h5 class="footer-head">Email</h5>
+                        <p class="text-muted">Start working with Landrick that can provide
+                          everything</p>
+                      </div>
+                    </div>
+                  </div><!--end col-->
+
+                  <div class="col-md-4 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <div class="card border-0 text-center features feature-primary feature-clean bg-transparent">
+                      <div class="icons text-center mx-auto">
+                        <i class="uil uil-map-marker d-block rounded h3 mb-0"></i>
+                      </div>
+                      <div class="content mt-4">
+                        <h5 class="footer-head">Location</h5>
+                        <p class="text-muted">C/54 Northwest Freeway, Suite 558, <br>Houston,
+                          USA
+                          485</p>
+                        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39206.002432144705!2d-95.4973981212445!3d29.709510002925988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c16de81f3ca5%3A0xf43e0b60ae539ac9!2sGerald+D.+Hines+Waterwall+Park!5e0!3m2!1sen!2sin!4v1566305861440!5m2!1sen!2sin"
+                          data-type="iframe" class="video-play-icon text-foot lightbox">View
+                          on
+                          Google map</a>
+                      </div>
+                    </div>
+                  </div><!--end col-->
+                </div><!--end row-->
+              </div>
+            </div><!--end col-->
+          </div><!--end row-->
+        </div><!--end container-->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="footer-py-60 footer-border">
+                <div class="row">
+                  <div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
+                    <a href="javascript:void(0)" class="logo-footer">
+                      <img src="assets/bootstrap/images/logo-light.png" height="24" alt="">
+                    </a>
+                    <p class="mt-4">Start working with Landrick that can provide everything you need
+                      to
+                      generate awareness, drive traffic, connect.</p>
+                    <ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">
+                      <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded"><i-feather
+                            name="facebook" class="fea icon-sm fea-social"></i-feather></a></li>
+                      <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded"><i-feather
+                            name="instagram" class="fea icon-sm fea-social"></i-feather></a>
+                      </li>
+                      <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded"><i-feather
+                            name="twitter" class="fea icon-sm fea-social"></i-feather></a></li>
+                      <li class="list-inline-item ms-1"><a href="javascript:void(0)" class="rounded"><i-feather
+                            name="linkedin" class="fea icon-sm fea-social"></i-feather></a></li>
+                    </ul><!--end icon-->
+                  </div><!--end col-->
+
+                  <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <h5 class="footer-head">Company</h5>
+                    <ul class="list-unstyled footer-list mt-4">
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          About us</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Services</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Team</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Pricing</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Project</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Careers</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Blog</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Login</a></li>
+                    </ul>
+                  </div><!--end col-->
+
+                  <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <h5 class="footer-head">Usefull Links</h5>
+                    <ul class="list-unstyled footer-list mt-4">
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Terms of Services</a>
+                      </li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Privacy Policy</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Documentation</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Changelog</a></li>
+                      <li><a href="javascript:void(0)" class="text-foot"><i class="uil uil-angle-right-b me-1"></i>
+                          Components</a></li>
+                    </ul>
+                  </div><!--end col-->
+
+                  <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <h5 class="footer-head">Newsletter</h5>
+                    <p class="mt-4">Sign up and receive the latest tips via email.</p>
+                    <form [formGroup]="newsForm" (ngSubmit)="onSubmit()">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="foot-subscribe mb-3">
+                            <label class="form-label">Write your email <span class="text-danger">*</span></label>
+                            <div class="form-icon position-relative">
+                              <i-feather name="mail" class="fea icon-sm icons"></i-feather>
+                              <input type="email" name="email" id="emailsubscribe" class="form-control ps-5 rounded"
+                                placeholder="Your email : " required formControlName="email"
+                                [ngClass]="{ 'is-invalid': submitted && form['email'].errors }">
+                              <div *ngIf="submitted && form['email'].errors" class="invalid-feedback">
+                                <div *ngIf="form['email'].errors">Please Enter Email.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="d-grid">
+                            <input type="submit" id="submitsubscribe" name="send" class="btn btn-soft-primary"
+                              value="Subscribe">
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div><!--end col-->
+                </div><!--end row-->
+              </div>
+            </div><!--end col-->
+          </div><!--end row-->
+        </div><!--end container-->
+
+        <div class="footer-py-30 footer-bar">
+          <div class="container text-center">
+            <div class="row align-items-center">
+              <div class="col-sm-6">
+                <div class="text-sm-start">
+                  <p class="mb-0">©
+                    {{year}} Landrick. Design with <i class="mdi mdi-heart text-danger"></i> by
+                    <a href="javascript:void(0)" class="text-reset">Themesbrand</a>.
+                  </p>
+                </div>                                        <li><a routerLink="/components" class="text-foot"><i
+                  class="uil uil-angle-right-b me-1"></i>
+              Team</a></li>
+              </div><!--end col-->
+
+              <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <ul class="list-unstyled text-sm-end mb-0">
+                  <li class="list-inline-item"><a href="javascript:void(0)"><img
+                        src="assets/bootstrap/images/payments/american-ex.png" class="avatar avatar-ex-sm"
+                        title="American Express" alt=""></a></li>
+                  <li class="list-inline-item"><a href="javascript:void(0)"><img
+                        src="assets/bootstrap/images/payments/discover.png" class="avatar avatar-ex-sm" title="Discover"
+                        alt=""></a></li>
+                  <li class="list-inline-item"><a href="javascript:void(0)"><img
+                        src="assets/bootstrap/images/payments/master-card.png" class="avatar avatar-ex-sm" title="Master Card"
+                        alt=""></a></li>
+                  <li class="list-inline-item"><a href="javascript:void(0)"><img src="assets/bootstrap/images/payments/paypal.png"
+                        class="avatar avatar-ex-sm" title="Paypal" alt=""></a></li>
+                  <li class="list-inline-item"><a href="javascript:void(0)"><img src="assets/bootstrap/images/payments/visa.png"
+                        class="avatar avatar-ex-sm" title="Visa" alt=""></a></li>
+                </ul>
+              </div><!--end col-->
+            </div><!--end row-->
+          </div><!--end container-->
+        </div>
+      </footer>
+      <!-- Footer End -->
+    </div>
+  </div>
+</div>
