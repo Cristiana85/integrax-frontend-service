@@ -2,7 +2,6 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LightboxModule } from 'ngx-lightbox';
 
 import { GoogleLoginProvider, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
@@ -11,7 +10,6 @@ import { RePasswordComponent } from './landing-page/auth/re-password/re-password
 import { SigninComponent } from './landing-page/auth/signin/signin.component';
 import { SignupComponent } from './landing-page/auth/signup/signup.component';
 import { CorporatePricingComponent } from './landing-page/core/components/corporate-pricing/corporate-pricing.component';
-import { HeaderComponent } from './landing-page/core/components/header/header.component';
 import { IndexComponent } from './landing-page/core/components/index/index.component';
 import { WorkspaceComponent } from './landing-page/core/components/workspace/workspace.component';
 import { AuthBsLoginComponent } from './landrick/auth/auth-bs-login/auth-bs-login.component';
@@ -33,31 +31,26 @@ import { EmailConfirmationComponent } from './landrick/email/email-confirmation/
 import { EmailInvoiceComponent } from './landrick/email/email-invoice/email-invoice.component';
 import { EmailPasswordResetComponent } from './landrick/email/email-password-reset/email-password-reset.component';
 import { FooterComponent } from './landrick/shared/footer/footer.component';
-import { SwitcherComponent } from './landrick/shared/switcher/switcher.component';
 
 import { DatePipe } from '@angular/common';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { AlertComponent } from './components/old/alert/alert.component';
 import { ErrorInterceptor } from './components/old/helpers/error.interceptor';
 import { JwtInterceptor } from './components/old/helpers/jwt.interceptor';
-import { DashboardFileManagerComponent } from './dashboard/dashboard-file-manager/dashboard-file-manager.component';
 import { DashboardFooterComponent } from './dashboard/dashboard-footer/dashboard-footer.component';
 import { DashboardHeaderComponent } from './dashboard/dashboard-header/dashboard-header.component';
 import { DashboardSidebarComponent } from './dashboard/dashboard-sidebar/dashboard-sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChPasswordComponent } from './landing-page/auth/ch-password/ch-password.component';
 import { MasterPageComponent } from './landing-page/core/components/master-page/master-page.component';
-import { MaterialModule } from './material/material.module';
-import { WasmService } from './services/wasm.service';
-import { NgbDropdownModule, NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
-import { CarouselModule } from 'ngx-owl-carousel-o';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { SharedModule } from './landrick/shared/shared.module';
+import { WasmService } from './services/wasm.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    //HeaderComponent,
     FooterComponent,
     LoginComponent,
     RegistrationComponent,
@@ -77,7 +70,7 @@ import { SharedModule } from './landrick/shared/shared.module';
     EmailInvoiceComponent,
     EmailPasswordResetComponent,
     IndexComponent,
-    SwitcherComponent,
+    //SwitcherComponent,
     CorporatePricingComponent,
     WorkspaceComponent,
     AuthBsLoginComponent,
@@ -91,7 +84,7 @@ import { SharedModule } from './landrick/shared/shared.module';
     DashboardComponent,
     DashboardSidebarComponent,
     DashboardHeaderComponent,
-    DashboardFileManagerComponent,
+    //DashboardFileManagerComponent,
     DashboardFooterComponent,
   ],
   imports: [
@@ -99,41 +92,41 @@ import { SharedModule } from './landrick/shared/shared.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     RouterModule,
-    CarouselModule,
-    FeatherModule.pick(allIcons),
-    ScrollToModule.forRoot(),
+    //CarouselModule,
+    //FeatherModule.pick(allIcons),
+    //ScrollToModule.forRoot(),
     RouterModule.forRoot([], {}),
-    YouTubePlayerModule,
-    NgbDropdownModule,
-    CKEditorModule,
-    NgbModule,
-    NgbNavModule,
+    //YouTubePlayerModule,
+    //NgbDropdownModule,
+    //CKEditorModule,
+    //NgbModule,
+    //NgbNavModule,
     FormsModule,
     ReactiveFormsModule,
-    SlickCarouselModule,
-    NgApexchartsModule,
-    NgxTypedJsModule,
-    FlatpickrModule.forRoot(),
-    CountUpModule,
-    NgxMasonryModule,
-    LightboxModule,
+    //SlickCarouselModule,
+    //NgApexchartsModule,
+    //NgxTypedJsModule,
+    //FlatpickrModule.forRoot(),
+    //CountUpModule,
+    //NgxMasonryModule,
+    //LightboxModule,
     SharedModule,
-    SimplebarAngularModule,
+    //SimplebarAngularModule,
     HttpClientModule,
     AppRoutingModule,
-    NgxEchartsModule,
-    MaterialModule,
-    NgScrollbarModule,
+    //NgxEchartsModule,
+    //MaterialModule,
+    //NgScrollbarModule,
   ],
   exports: [
-    FeatherModule,
+    //FeatherModule,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [
     DatePipe,
-    provideEcharts(),
+    //provideEcharts(),
     WasmService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

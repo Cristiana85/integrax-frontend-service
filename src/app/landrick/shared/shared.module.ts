@@ -1,9 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 
-import { FeatherModule } from 'angular-feather';
 import { ScrollspyDirective } from './scrollspy.directive';
 
 import { BlogComponent } from './blog/blog.component';
@@ -33,8 +31,8 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
   ],
   imports: [
     CommonModule,
-    CarouselModule,
-    FeatherModule,
+    //CarouselModule,
+    //FeatherModule,
     RouterModule,
   ],
   exports: [TestimonialComponent,
