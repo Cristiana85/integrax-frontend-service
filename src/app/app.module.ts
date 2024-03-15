@@ -9,7 +9,6 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
-import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { FlatpickrModule } from 'angularx-flatpickr';
 import { CountUpModule } from 'ngx-countup';
 import { NgxEchartsModule, provideEcharts } from 'ngx-echarts';
@@ -125,7 +124,7 @@ import { WasmService } from './services/wasm.service';
     RouterModule,
     CarouselModule,
     FeatherModule.pick(allIcons),
-    ScrollToModule.forRoot(),
+    //ScrollToModule.forRoot(),
     RouterModule.forRoot([], {}),
     YouTubePlayerModule,
     NgbDropdownModule,
