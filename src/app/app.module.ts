@@ -7,35 +7,6 @@ import { LightboxModule } from 'ngx-lightbox';
 import { GoogleLoginProvider, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { YouTubePlayerModule } from '@angular/youtube-player';
-import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
-import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
-import { FlatpickrModule } from 'angularx-flatpickr';
-import { CountUpModule } from 'ngx-countup';
-import { NgxEchartsModule, provideEcharts } from 'ngx-echarts';
-import { NgxMasonryModule } from 'ngx-masonry';
-import { CarouselModule } from 'ngx-owl-carousel-o';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { NgxTypedJsModule } from 'ngx-typed-js';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
-import { NgScrollbarModule } from 'ngx-scrollbar';
-
-import { SimplebarAngularModule } from 'simplebar-angular';
-
-
-import { SharedModule } from "./landrick/shared/shared.module";
-
-import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
-import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
-
-import { FeatherModule } from 'angular-feather';
-
-// Apex chart
-import { NgApexchartsModule } from 'ng-apexcharts';
-
-import { allIcons } from 'angular-feather/icons';
 import { RePasswordComponent } from './landing-page/auth/re-password/re-password.component';
 import { SigninComponent } from './landing-page/auth/signin/signin.component';
 import { SignupComponent } from './landing-page/auth/signup/signup.component';
@@ -77,6 +48,11 @@ import { ChPasswordComponent } from './landing-page/auth/ch-password/ch-password
 import { MasterPageComponent } from './landing-page/core/components/master-page/master-page.component';
 import { MaterialModule } from './material/material.module';
 import { WasmService } from './services/wasm.service';
+import { NgbDropdownModule, NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { SharedModule } from './landrick/shared/shared.module';
 
 @NgModule({
   declarations: [
