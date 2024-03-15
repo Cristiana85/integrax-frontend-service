@@ -1,7 +1,7 @@
 export const defaultEnvironment = {
   tenant: 'Integra',
   tenantMapping: new Map<string, string>([
-    ['integra-x-frontend-service', 'Integra']
+    ['integrax-frontend-service', 'Integra']
  ]),
   icons: new Map<string, string>([
     //['menu.configuration', 'settings_application']

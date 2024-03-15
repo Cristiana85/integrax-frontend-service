@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'integra-x-frontend-service'`, () => {
+  it(`should have as title 'integrax-frontend-service'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('integra-x-frontend-service');
+    expect(app.title).toEqual('integrax-frontend-service');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('integra-x-frontend-service app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('integrax-frontend-service app is running!');
   });
 });
