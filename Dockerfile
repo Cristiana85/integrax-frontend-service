@@ -1,7 +1,7 @@
-FROM node:latest AS build
+FROM node:18.19.0 AS build
 WORKDIR /app
 COPY package*.json ./
-RUN npm install --legacy-peer-deps
+RUN npm install
 COPY . .
 RUN npm run build
 
