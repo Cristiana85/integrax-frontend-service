@@ -69,20 +69,21 @@ export class ProjectsService {
   }
 
   public deletelProject(
-    authorization: string,
+    handle: Handle,
     lProject: Array<Project>
   ): Observable<Result<void>> {
     const path = this.basePath + '/projects';
 
-    let headers = new HttpHeaders(); // https://github.com/angular/angular/issues/6845
-    // verify required parameter 'authorization' is not null or undefined
-    if (authorization === null || authorization === undefined) {
+    if (handle === null || handle === undefined) {
       throw new Error(
-        'Required parameter authorization was null or undefined when calling deletelProject.'
+        'Required parameter handle was null or undefined when calling addProject.'
       );
     }
-    if (authorization !== undefined && authorization !== null) {
-      headers = headers.set('Authorization', 'Bearer ' + btoa(authorization));
+
+    let headers = new HttpHeaders();
+    if (handle !== undefined && handle !== null) {
+      headers = headers.set('AccountId', String(handle.accountId));
+      headers = headers.set('Authorization', 'Bearer ' + btoa(handle.token));
     }
 
     // verify required parameter 'lCustomization' is not null or undefined

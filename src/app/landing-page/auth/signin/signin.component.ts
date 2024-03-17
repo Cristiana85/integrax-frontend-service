@@ -84,11 +84,6 @@ export class SigninComponent implements OnInit {
             // get return url from query parameters or default to home page
             const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
             this.router.navigateByUrl(returnUrl);
-
-            this.projectService.saveProject(this.tokenStorage.getToken() || '{}', new Project())
-              .subscribe(x => {
-              });
-
           } else {
             this.errors = true;
             //this.alertService.error(ret.message);

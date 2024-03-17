@@ -102,7 +102,7 @@ export class DashboardFileManagerComponent implements OnInit {
 
   deletelProject(project: Project) {
     this.projectService
-      .deletelProject(this.token, [project])
+      .deletelProject(HandleUtils.getHandle(this.accountService.userValue), [project])
       .subscribe((result) => {
         if (result.successful) {
           /*this.growlService.showSuccessMessage(
