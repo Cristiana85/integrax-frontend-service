@@ -9,6 +9,7 @@ import { IndexComponent } from './landing-page/core/components/index/index.compo
 import { MasterPageComponent } from './landing-page/core/components/master-page/master-page.component';
 import { SwitcherComponent } from './landrick/shared/switcher/switcher.component';
 import { AuthGuard } from './landing-page/auth/auth.guard';
+import { BudgetComponent } from './apps/budget/budget.component';
 
 const routes: Routes = [
   {
@@ -47,6 +48,7 @@ const routes: Routes = [
 
   //Login
     { path: 'workspace', loadChildren: () => import('./workspace/workspace.module').then(m => m.WorkspaceModule), canActivate: [AuthGuard] },
+    { path: 'budget', component: BudgetComponent},
   ]
   ;
 

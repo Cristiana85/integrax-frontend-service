@@ -68,7 +68,6 @@ import { ErrorInterceptor } from './components/old/helpers/error.interceptor';
 import { JwtInterceptor } from './components/old/helpers/jwt.interceptor';
 import { ChPasswordComponent } from './landing-page/auth/ch-password/ch-password.component';
 import { MasterPageComponent } from './landing-page/core/components/master-page/master-page.component';
-import { MaterialModule } from './material/material.module';
 import { WasmService } from './services/wasm.service';
 import { TeamSpaceComponent } from './workspace/team-space/team-space.component';
 import { MySpaceComponent } from './workspace/my-space/my-space.component';
@@ -77,6 +76,9 @@ import { WorkspaceFooterComponent } from './workspace/workspace-footer/workspace
 import { WorkspaceHeaderComponent } from './workspace/workspace-header/workspace-header.component';
 import { WorkspaceSidebarComponent } from './workspace/workspace-sidebar/workspace-sidebar.component';
 import { WorkspaceComponent } from './workspace/workspace.component';
+import { BudgetComponent } from './apps/budget/budget.component';
+import { InterconnectComponent } from './apps/interconnect/interconnect.component';
+import { MaterialModule } from './landrick/shared/material/material.module';
 
 @NgModule({
   declarations: [
@@ -117,7 +119,9 @@ import { WorkspaceComponent } from './workspace/workspace.component';
     WorkspaceFileManagerComponent,
     WorkspaceFooterComponent,
     TeamSpaceComponent,
-    MySpaceComponent
+    MySpaceComponent,
+    BudgetComponent,
+    InterconnectComponent
   ],
   imports: [
     BrowserModule,
