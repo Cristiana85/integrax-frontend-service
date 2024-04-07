@@ -1,0 +1,53 @@
+<div class="dashboard-sidebar-area bg-white dashboard-box-shadow" [ngClass]="{'active': isToggled}">
+  <div class="dashbaord-logo bg-white">
+    <a routerLink="/" class="dashboard-d-flex dashboard-align-items-center">
+      <img src="../../../assets/img/logo-icon.png" alt="logo">
+      <span>IntegraX</span>
+    </a>
+  </div>
+  <div class="dashboard-burger-menu" (click)="toggle()" [ngClass]="{'active': isToggled}">
+    <span class="dashboard-top-bar"></span>
+    <span class="dashboard-middle-bar"></span>
+    <span class="dashboard-bottom-bar"></span>
+  </div>
+  <ng-scrollbar visibility="hover" style="height: 100vh;">
+    <div class="sidebar-inner">
+      <div class="sidebar-menu">
+        <mat-accordion>
+          <a routerLink="/dashboard" class="sidebar-menu-link" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">
+            <i class="flaticon-menu-1"></i>
+            <span class="dashboard-title">Workbench</span>
+          </a>
+          <a routerLink="/dashboard/team-space" class="sidebar-menu-link" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">
+            <i class="flaticon-comment"></i>
+            <span class="title">Team Space</span>
+          </a>
+          <a routerLink="/dashboard/my-space" class="sidebar-menu-link" routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}">
+          <i class="flaticon-resume"></i>
+          <span class="title">My Space</span>
+        </a>
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = true">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <i class="flaticon-layer"></i>
+                <span class="dashboard-title">File Manager</span>
+                <span class="dashboard-badge one">1</span>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="sidebar-sub-menu">
+              <li class="sidemenu-item">
+                <a routerLink="/dashboard/dashboard-file-manager" routerLinkActive="active"
+                  [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                  My Drive
+                </a>
+              </li>
+            </ul>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </div>
+  </ng-scrollbar>
+</div>

@@ -41,7 +41,6 @@ import { SignupComponent } from './landing-page/auth/signup/signup.component';
 import { CorporatePricingComponent } from './landing-page/core/components/corporate-pricing/corporate-pricing.component';
 import { HeaderComponent } from './landing-page/core/components/header/header.component';
 import { IndexComponent } from './landing-page/core/components/index/index.component';
-import { WorkspaceComponent } from './landing-page/core/components/workspace/workspace.component';
 import { AuthBsLoginComponent } from './landrick/auth/auth-bs-login/auth-bs-login.component';
 import { AuthBsResetComponent } from './landrick/auth/auth-bs-reset/auth-bs-reset.component';
 import { AuthBsSignupComponent } from './landrick/auth/auth-bs-signup/auth-bs-signup.component';
@@ -67,15 +66,17 @@ import { DatePipe } from '@angular/common';
 import { AlertComponent } from './components/old/alert/alert.component';
 import { ErrorInterceptor } from './components/old/helpers/error.interceptor';
 import { JwtInterceptor } from './components/old/helpers/jwt.interceptor';
-import { DashboardFileManagerComponent } from './dashboard/dashboard-file-manager/dashboard-file-manager.component';
-import { DashboardFooterComponent } from './dashboard/dashboard-footer/dashboard-footer.component';
-import { DashboardHeaderComponent } from './dashboard/dashboard-header/dashboard-header.component';
-import { DashboardSidebarComponent } from './dashboard/dashboard-sidebar/dashboard-sidebar.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChPasswordComponent } from './landing-page/auth/ch-password/ch-password.component';
 import { MasterPageComponent } from './landing-page/core/components/master-page/master-page.component';
 import { MaterialModule } from './material/material.module';
 import { WasmService } from './services/wasm.service';
+import { TeamSpaceComponent } from './workspace/team-space/team-space.component';
+import { MySpaceComponent } from './workspace/my-space/my-space.component';
+import { WorkspaceFileManagerComponent } from './workspace/workspace-file-manager/workspace-file-manager.component';
+import { WorkspaceFooterComponent } from './workspace/workspace-footer/workspace-footer.component';
+import { WorkspaceHeaderComponent } from './workspace/workspace-header/workspace-header.component';
+import { WorkspaceSidebarComponent } from './workspace/workspace-sidebar/workspace-sidebar.component';
+import { WorkspaceComponent } from './workspace/workspace.component';
 
 @NgModule({
   declarations: [
@@ -102,7 +103,6 @@ import { WasmService } from './services/wasm.service';
     IndexComponent,
     SwitcherComponent,
     CorporatePricingComponent,
-    WorkspaceComponent,
     AuthBsLoginComponent,
     AuthLoginBgVideoComponent,
     AuthBsSignupComponent,
@@ -111,11 +111,13 @@ import { WasmService } from './services/wasm.service';
     AuthResetPasswordBgVideoComponent,
     AlertComponent,
     //DASHBOARD Component
-    DashboardComponent,
-    DashboardSidebarComponent,
-    DashboardHeaderComponent,
-    DashboardFileManagerComponent,
-    DashboardFooterComponent,
+    WorkspaceComponent,
+    WorkspaceSidebarComponent,
+    WorkspaceHeaderComponent,
+    WorkspaceFileManagerComponent,
+    WorkspaceFooterComponent,
+    TeamSpaceComponent,
+    MySpaceComponent
   ],
   imports: [
     BrowserModule,

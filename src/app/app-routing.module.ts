@@ -46,7 +46,8 @@ const routes: Routes = [
   { path: 'email-password-reset', component: EmailPasswordResetComponent },*/
 
   //Login
-  { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule), canActivate: [AuthGuard] }]
+    { path: 'workspace', loadChildren: () => import('./workspace/workspace.module').then(m => m.WorkspaceModule), canActivate: [AuthGuard] },
+  ]
   ;
 
 @NgModule({

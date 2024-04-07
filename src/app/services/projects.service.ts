@@ -1,10 +1,10 @@
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Project } from 'src/app/models/project';
 import { environment } from 'src/environments/environment';
-import { Result } from '../models/result';
 import { Handle } from '../models/handle';
+import { Result } from '../models/result';
 
 @Injectable({
   providedIn: 'root'

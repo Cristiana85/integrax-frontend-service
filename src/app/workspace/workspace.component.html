@@ -1,0 +1,11 @@
+<div
+  [ngClass]="{'blank-page': router.url === '/error-500' || router.url === '/authentication/reset-password' || router.url === '/authentication/forgot-password' || router.url === '/authentication/login' || router.url === '/authentication/register' || router.url === '/authentication/signin-signup' || router.url === '/authentication/logout' || router.url === '/authentication/confirm-mail' || router.url === '/authentication/lock-screen' || router.url === '/coming-soon'}">
+  <app-workspace-sidebar></app-workspace-sidebar>
+  <div class="main-content dashboard-d-flex dashboard-flex-column" [ngClass]="{'active': isToggled}">
+    <app-workspace-header></app-workspace-header>
+    <router-outlet></router-outlet>
+    <div class="dashboard-flex-grow-1"></div>
+    <app-workspace-footer></app-workspace-footer>
+  </div>
+  <app-workspace-customizer-settings></app-workspace-customizer-settings>
+</div>
