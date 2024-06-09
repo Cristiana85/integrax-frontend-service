@@ -39,6 +39,7 @@
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
               "node_modules/ngx-lightbox/lightbox.css",
               "src/styles-workspace.scss",
+              "src/styles.scss",
               "src/styles-landing.css"
             ],
             "scripts": [
@@ -105,6 +106,7 @@
             ],
             "styles": [
               "src/styles-workspace.scss",
+              "src/styles.scss",
               "src/assets/bootstrap/css/bootstrap.min.css",
               "node_modules/slick-carousel/slick/slick.scss",
               "node_modules/slick-carousel/slick/slick-theme.scss",
