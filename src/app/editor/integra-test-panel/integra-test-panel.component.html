@@ -1,0 +1,43 @@
+<div #container class="test-panel" [style.top.px] = posY [style.left.px] = posX (mousemove)="move($event)" (mouseleave)="up($event)" (mouseup)="up($event)">
+  <button class="test-drag-button" (mousedown)="down($event)">
+  </button>
+  <button class="test-button" (click)="click('Navigating')">
+    Navigating
+  </button>
+  <button class="test-button" (click)="click('Panning')">
+    Panning
+  </button>
+  <button class="test-button" (click)="click('Copy')">
+    Copy
+  </button>
+  <button class="test-button" (click)="click('Paste')">
+    Paste
+  </button>
+  <button class="test-button" (click)="click('Cut')">
+    Cut
+  </button>
+  <button class="test-button" (click)="click('Import Model')">
+    Import Model
+  </button>
+  <button class="test-button" (click)="click('Print Nodes')">
+    Print Nodes
+  </button>
+  <button class="test-button" (click)="click('Rotate')">
+    Rotate
+  </button>
+  <button class="test-button" (click)="click('FlipX')">
+    FlipX
+  </button>
+  <button class="test-button" (click)="click('FlipY')">
+    FlipY
+  </button>
+  <button class="test-button" (click)="click('Undo')">
+    Undo
+  </button>
+  <button class="test-button" (click)="click('Redo')">
+    Redo
+  </button>
+  <button class="test-button" (click)="click('Delete')">
+    Delete
+  </button>
+</div>

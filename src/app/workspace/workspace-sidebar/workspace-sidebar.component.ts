@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { ToggleService } from '../workspace-header/toggle.service';
-
+import * as _ from 'lodash';
+import * as joint from 'jointjs';
+import * as jQuery from 'jquery';
+import * as $ from 'backbone';
 
 @Component({
     selector: 'app-workspace-sidebar',
@@ -19,6 +22,9 @@ export class WorkspaceSidebarComponent {
         this.toggleService.isToggled$.subscribe(isToggled => {
             this.isToggled = isToggled;
         });
+
+        const link = new joint.dia.Link();
+        console.log(link);
     }
 
     toggle() {

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EditorComponent } from './editor/editor.component';
+import { AuthGuard } from './landing-page/auth/auth.guard';
 import { ChPasswordComponent } from './landing-page/auth/ch-password/ch-password.component';
 import { RePasswordComponent } from './landing-page/auth/re-password/re-password.component';
 import { SigninComponent } from './landing-page/auth/signin/signin.component';
@@ -8,8 +10,6 @@ import { CorporatePricingComponent } from './landing-page/core/components/corpor
 import { IndexComponent } from './landing-page/core/components/index/index.component';
 import { MasterPageComponent } from './landing-page/core/components/master-page/master-page.component';
 import { SwitcherComponent } from './landrick/shared/switcher/switcher.component';
-import { AuthGuard } from './landing-page/auth/auth.guard';
-import { BudgetComponent } from './apps/budget/budget.component';
 
 const routes: Routes = [
   {
@@ -48,7 +48,7 @@ const routes: Routes = [
 
   //Login
     { path: 'workspace', loadChildren: () => import('./workspace/workspace.module').then(m => m.WorkspaceModule), canActivate: [AuthGuard] },
-    { path: 'budget', component: BudgetComponent},
+    { path: 'editor', component: EditorComponent},
   ]
   ;
 

@@ -79,6 +79,11 @@ import { WorkspaceComponent } from './workspace/workspace.component';
 import { BudgetComponent } from './apps/budget/budget.component';
 import { InterconnectComponent } from './apps/interconnect/interconnect.component';
 import { MaterialModule } from './landrick/shared/material/material.module';
+import { LibAvoidWasmService } from './services/wasm/libavoid/libavoid.wasm.service';
+import { DiagramComponent } from './diagram/diagram.component';
+import { EditorComponent } from './editor/editor.component';
+import { ChartComponent } from './chart/chart.component';
+import { IntegraTestPanelComponent } from './editor/integra-test-panel/integra-test-panel.component';
 
 @NgModule({
   declarations: [
@@ -121,7 +126,11 @@ import { MaterialModule } from './landrick/shared/material/material.module';
     TeamSpaceComponent,
     MySpaceComponent,
     BudgetComponent,
-    InterconnectComponent
+    InterconnectComponent,
+    DiagramComponent,
+    EditorComponent,
+    ChartComponent,
+    IntegraTestPanelComponent
   ],
   imports: [
     BrowserModule,
@@ -164,6 +173,7 @@ import { MaterialModule } from './landrick/shared/material/material.module';
     DatePipe,
     provideEcharts(),
     WasmService,
+    LibAvoidWasmService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     {
