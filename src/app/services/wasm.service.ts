@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
 import { filter, map } from "rxjs/operators";
 
-import * as Module from '../../../wasm/test.js';
-import '!!file-loader?name=wasm/test.wasm!../../../wasm/test.wasm';
+import * as Module from '../../../wasm/libavoid.js';
+import '!!file-loader?name=wasm/test.wasm!../../../wasm/libavoid.wasm';
 import { BehaviorSubject, Observable } from "rxjs";
 
 @Injectable()

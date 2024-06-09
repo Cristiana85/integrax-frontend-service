@@ -1,1 +1,3 @@
 C:\Workspace\integra-x\integra-x\integrax-frontend-service\wasm\fibonacci.c -O1 -s WASM=1 -s MODULARIZE=1 -o C:\Workspace\integra-x\integra-x\integrax-frontend-service\wasm\fibonacci.js
+
+emcc libavoid/connectionpin.cpp libavoid/connector.cpp libavoid/connend.cpp libavoid/geometry.cpp libavoid/geomtypes.cpp libavoid/graph.cpp libavoid/junction.cpp libavoid/makepath.cpp libavoid/obstacle.cpp libavoid/orthogonal.cpp libavoid/router.cpp libavoid/shape.cpp libavoid/timer.cpp libavoid/vertices.cpp libavoid/viscluster.cpp libavoid/visibility.cpp libavoid/vpsc.cpp libavoid/hyperedge.cpp libavoid/hyperedgeimprover.cpp libavoid/mtst.cpp libavoid/hyperedgetree.cpp libavoid/scanline.cpp libavoid/actioninfo.cpp -I/src/cola/ -fPIC -o libavoid.js

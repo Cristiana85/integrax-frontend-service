@@ -7613,7 +7613,7 @@ File: Icons Css File
   content: "\f01c4";
 }
 
-.mdi-desktop-mac-dashboard::before {
+.mdi-desktop-mac-workspace::before {
   content: "\f09e8";
 }
 
@@ -14765,7 +14765,7 @@ File: Icons Css File
   content: "\f1104";
 }
 
-.mdi-monitor-dashboard::before {
+.mdi-monitor-workspace::before {
   content: "\f0a07";
 }
 
@@ -20781,7 +20781,7 @@ File: Icons Css File
   content: "\f09a7";
 }
 
-.mdi-tablet-dashboard::before {
+.mdi-tablet-workspace::before {
   content: "\f0ece";
 }
 
@@ -22377,19 +22377,19 @@ File: Icons Css File
   content: "\f0e6c";
 }
 
-.mdi-view-dashboard::before {
+.mdi-view-workspace::before {
   content: "\f056e";
 }
 
-.mdi-view-dashboard-outline::before {
+.mdi-view-workspace-outline::before {
   content: "\f0a1d";
 }
 
-.mdi-view-dashboard-variant::before {
+.mdi-view-workspace-variant::before {
   content: "\f0843";
 }
 
-.mdi-view-dashboard-variant-outline::before {
+.mdi-view-workspace-variant-outline::before {
   content: "\f1489";
 }
 

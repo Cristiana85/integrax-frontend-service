@@ -1,5 +1,5 @@
-// The CSS is Available on the _dashboard-sidebar.scss file because of Angular Material CSS didn't work in Component CSS.
-.dashboard-sidebar-area {
+// The CSS is Available on the _workspace-sidebar.scss file because of Angular Material CSS didn't work in Component CSS.
+.workspace-sidebar-area {
   transition: var(--transition);
   border-radius: 0 10px 10px 0;
   overflow: hidden;
@@ -34,7 +34,7 @@
           }
       }
   }
-  .dashboard-burger-menu {
+  .workspace-burger-menu {
       top: 30px;
       z-index: 3;
       opacity: 0;
@@ -61,10 +61,10 @@
                   transform: rotate(45deg);
                   transform-origin: 10% 10%;
               }
-              &.dashboard-middle-bar {
+              &.workspace-middle-bar {
                   opacity: 0;
               }
-              &.dashboard-bottom-bar {
+              &.workspace-bottom-bar {
                   transform: rotate(-45deg);
                   transform-origin: 10% 90%;
                   margin-top: 5px;
@@ -173,7 +173,7 @@
                       transform: rotate(-45deg);
                   }
               }
-              .dashboard-badge {
+              .workspace-badge {
                   top: 50%;
                   padding: 0;
                   right: 32px;
@@ -258,14 +258,14 @@
                               background-color: var(--heraBlueColor);
                               color: var(--whiteColor);
 
-                              .dashboard-badge {
+                              .workspace-badge {
                                   background: var(--whiteColor);
                               }
                               &::after {
                                   background-color: var(--whiteColor);
                               }
                           }
-                          .dashboard-badge {
+                          .workspace-badge {
                               font-size: 11px;
                               padding: 4px 8px;
                               margin-left: 2px;
@@ -407,13 +407,13 @@
                       right: 0;
                       text-align: center;
                   }
-                  .dashboard-title {
+                  .workspace-title {
                       display: none;
                   }
                   .mat-expansion-indicator {
                       display: none;
                   }
-                  .dashboard-badge {
+                  .workspace-badge {
                       display: none;
                   }
               }
@@ -431,12 +431,12 @@
                   right: 0;
                   text-align: center;
               }
-              .dashboard-title {
+              .workspace-title {
                   display: none;
               }
           }
       }
-      .dashboard-burger-menu {
+      .workspace-burger-menu {
           opacity: 0;
           visibility: hidden;
       }
@@ -454,7 +454,7 @@
                   }
               }
           }
-          .dashboard-burger-menu {
+          .workspace-burger-menu {
               opacity: 1;
               visibility: visible;
           }
@@ -490,13 +490,13 @@
                           right: auto;
                           text-align: unset;
                       }
-                      .dashboard-title {
+                      .workspace-title {
                           display: block;
                       }
                       .mat-expansion-indicator {
                           display: inline-block;
                       }
-                      .dashboard-badge {
+                      .workspace-badge {
                           display: inline-block;
                       }
                   }
@@ -518,7 +518,7 @@
                       right: auto;
                       text-align: unset;
                   }
-                  .dashboard-title {
+                  .workspace-title {
                       display: block;
                   }
               }
@@ -567,13 +567,13 @@
                       right: 0;
                       text-align: center;
                   }
-                  .dashboard-title {
+                  .workspace-title {
                       display: none;
                   }
                   .mat-expansion-indicator {
                       display: none;
                   }
-                  .dashboard-badge {
+                  .workspace-badge {
                       display: none;
                   }
               }
@@ -591,12 +591,12 @@
                   right: 0;
                   text-align: center;
               }
-              .dashboard-title {
+              .workspace-title {
                   display: none;
               }
           }
       }
-      .dashboard-burger-menu {
+      .workspace-burger-menu {
           opacity: 0;
           visibility: hidden;
       }
@@ -646,13 +646,13 @@
                           right: auto;
                           text-align: unset;
                       }
-                      .dashboard-title {
+                      .workspace-title {
                           display: block;
                       }
                       .mat-expansion-indicator {
                           display: inline-block;
                       }
-                      .dashboard-badge {
+                      .workspace-badge {
                           display: inline-block;
                       }
                   }
@@ -674,7 +674,7 @@
                       right: auto;
                       text-align: unset;
                   }
-                  .dashboard-title {
+                  .workspace-title {
                       display: block;
                   }
               }
@@ -692,7 +692,7 @@
               background-color: #14171c !important;
           }
       }
-      .dashboard-burger-menu {
+      .workspace-burger-menu {
           span {
               background: var(--whiteColor);
           }
@@ -798,7 +798,7 @@
           background-color: #14171c !important;
       }
       &.card-borderd-theme {
-          .dashboard-sidebar-area {
+          .workspace-sidebar-area {
               box-shadow: var(--borderWhiteBoxShadow) !important;
           }
       }
@@ -812,13 +812,13 @@
 
 // Dark Mode
 .dark-theme {
-  .dashboard-sidebar-area {
+  .workspace-sidebar-area {
       .dashbaord-logo {
           a {
               color: var(--whiteColor);
           }
       }
-      .dashboard-burger-menu {
+      .workspace-burger-menu {
           span {
               background: var(--whiteColor);
           }
@@ -919,7 +919,7 @@
       }
   }
   &.card-borderd-theme {
-      .dashboard-sidebar-area {
+      .workspace-sidebar-area {
           box-shadow: var(--borderWhiteBoxShadow) !important;
       }
   }
@@ -927,28 +927,28 @@
 
 // Borderd Card Theme
 .card-borderd-theme {
-  .dashboard-sidebar-area {
+  .workspace-sidebar-area {
       box-shadow: var(--borderBoxShadow) !important;
   }
 }
 
 // Borderd Card Theme
 .card-borderd-theme {
-  .dashboard-sidebar-area {
+  .workspace-sidebar-area {
       box-shadow: var(--borderBoxShadow) !important;
   }
 }
 
 // Border Radius Card Theme
 .card-border-radius {
-  .dashboard-sidebar-area {
+  .workspace-sidebar-area {
       border-radius: 0 !important;
   }
 }
 
 // RTL CSS
 .rtl-enabled {
-  .dashboard-sidebar-area {
+  .workspace-sidebar-area {
       left: auto;
       right: 0;
 
@@ -962,7 +962,7 @@
               }
           }
       }
-      .dashboard-burger-menu {
+      .workspace-burger-menu {
           right: auto;
           left: 15px;
       }
@@ -1009,7 +1009,7 @@
                           transform: rotate(130deg);
                       }
                   }
-                  .dashboard-badge {
+                  .workspace-badge {
                       right: auto;
                       left: 32px;
                   }
@@ -1028,7 +1028,7 @@
                                   left: auto;
                                   right: 20px;
                               }
-                              .dashboard-badge {
+                              .workspace-badge {
                                   margin: {
                                       left: 0;
                                       right: 2px;
@@ -1196,7 +1196,7 @@
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
 
-  .dashboard-sidebar-area {
+  .workspace-sidebar-area {
       width: 250px;
       left: -100%;
 
@@ -1216,7 +1216,7 @@
               font-size: 13px;
           }
       }
-      .dashboard-burger-menu {
+      .workspace-burger-menu {
           top: 25px;
           right: 12px;
       }
@@ -1250,7 +1250,7 @@
                           padding: 2px;
                       }
                   }
-                  .dashboard-badge {
+                  .workspace-badge {
                       right: 25px;
                       font-size: 11px;
                       padding: 0 7px 1px;
@@ -1318,7 +1318,7 @@
                   }
               }
           }
-          .dashboard-burger-menu {
+          .workspace-burger-menu {
               opacity: 1;
               visibility: visible;
           }
@@ -1354,13 +1354,13 @@
                           right: auto;
                           text-align: unset;
                       }
-                      .dashboard-title {
+                      .workspace-title {
                           display: block;
                       }
                       .mat-expansion-indicator {
                           display: inline-block;
                       }
-                      .dashboard-badge {
+                      .workspace-badge {
                           display: inline-block;
                       }
                   }
@@ -1382,7 +1382,7 @@
                       right: auto;
                       text-align: unset;
                   }
-                  .dashboard-title {
+                  .workspace-title {
                       display: block;
                   }
               }
@@ -1401,7 +1401,7 @@
                       }
                   }
               }
-              .dashboard-burger-menu {
+              .workspace-burger-menu {
                   opacity: 1;
                   visibility: visible;
               }
@@ -1437,13 +1437,13 @@
                               right: auto;
                               text-align: unset;
                           }
-                          .dashboard-title {
+                          .workspace-title {
                               display: block;
                           }
                           .mat-expansion-indicator {
                               display: inline-block;
                           }
-                          .dashboard-badge {
+                          .workspace-badge {
                               display: inline-block;
                           }
                       }
@@ -1465,7 +1465,7 @@
                           right: auto;
                           text-align: unset;
                       }
-                      .dashboard-title {
+                      .workspace-title {
                           display: block;
                       }
                   }
@@ -1485,7 +1485,7 @@
 
   // RTL CSS
   .rtl-enabled {
-      .dashboard-sidebar-area {
+      .workspace-sidebar-area {
           left: auto;
           right: -100%;
 
@@ -1499,7 +1499,7 @@
                   }
               }
           }
-          .dashboard-burger-menu {
+          .workspace-burger-menu {
               right: auto;
               left: 12px;
           }
@@ -1518,7 +1518,7 @@
                           right: auto;
                           left: 12px;
                       }
-                      .dashboard-badge {
+                      .workspace-badge {
                           right: auto;
                           left: 25px;
                       }
@@ -1649,7 +1649,7 @@
 /* Min width 768px to Max width 991px */
 @media only screen and (min-width : 768px) and (max-width : 991px) {
 
-  .dashboard-sidebar-area {
+  .workspace-sidebar-area {
       left: -100%;
 
       .sidebar-inner {
@@ -1670,7 +1670,7 @@
                   }
               }
           }
-          .dashboard-burger-menu {
+          .workspace-burger-menu {
               opacity: 1;
               visibility: visible;
           }
@@ -1706,13 +1706,13 @@
                           right: auto;
                           text-align: unset;
                       }
-                      .dashboard-title {
+                      .workspace-title {
                           display: block;
                       }
                       .mat-expansion-indicator {
                           display: inline-block;
                       }
-                      .dashboard-badge {
+                      .workspace-badge {
                           display: inline-block;
                       }
                   }
@@ -1734,7 +1734,7 @@
                       right: auto;
                       text-align: unset;
                   }
-                  .dashboard-title {
+                  .workspace-title {
                       display: block;
                   }
               }
@@ -1760,7 +1760,7 @@
 
   // RTL CSS
   .rtl-enabled {
-      .dashboard-sidebar-area {
+      .workspace-sidebar-area {
           right: -100%;
           left: auto;
 
@@ -1818,7 +1818,7 @@
 /* Min width 992px to Max width 1199px */
 @media only screen and (min-width : 992px) and (max-width : 1199px) {
 
-  .dashboard-sidebar-area {
+  .workspace-sidebar-area {
       left: -100%;
 
       &.active {
@@ -1836,7 +1836,7 @@
                   }
               }
           }
-          .dashboard-burger-menu {
+          .workspace-burger-menu {
               opacity: 1;
               visibility: visible;
           }
@@ -1872,13 +1872,13 @@
                           right: auto;
                           text-align: unset;
                       }
-                      .dashboard-title {
+                      .workspace-title {
                           display: block;
                       }
                       .mat-expansion-indicator {
                           display: inline-block;
                       }
-                      .dashboard-badge {
+                      .workspace-badge {
                           display: inline-block;
                       }
                   }
@@ -1900,7 +1900,7 @@
                       right: auto;
                       text-align: unset;
                   }
-                  .dashboard-title {
+                  .workspace-title {
                       display: block;
                   }
               }
@@ -1926,7 +1926,7 @@
 
   // RTL CSS
   .rtl-enabled {
-      .dashboard-sidebar-area {
+      .workspace-sidebar-area {
           left: auto;
           right: -100%;
 
@@ -1984,7 +1984,7 @@
 /* Min width 1200px to Max width 1399px */
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
 
-  .dashboard-sidebar-area {
+  .workspace-sidebar-area {
       width: 240px;
 
       &.active {
@@ -2010,7 +2010,7 @@
 /* Min width 1600px */
 @media only screen and (min-width: 1600px) {
 
-  .dashboard-sidebar-area {
+  .workspace-sidebar-area {
       width: 300px;
 
       .dashbaord-logo {
@@ -2019,7 +2019,7 @@
               right: 25px;
           };
       }
-      .dashboard-burger-menu {
+      .workspace-burger-menu {
           right: 25px;
       }
       .sidebar-inner {
@@ -2045,7 +2045,7 @@
                   .mat-expansion-indicator {
                       right: 20px;
                   }
-                  .dashboard-badge {
+                  .workspace-badge {
                       right: 40px;
                   }
               }
@@ -2185,8 +2185,8 @@
 
   // RTL CSS
   .rtl-enabled {
-      .dashboard-sidebar-area {
-          .dashboard-burger-menu {
+      .workspace-sidebar-area {
+          .workspace-burger-menu {
               right: auto;
               left: 25px;
           }
@@ -2205,7 +2205,7 @@
                           left: 20px;
                           right: auto;
                       }
-                      .dashboard-badge {
+                      .workspace-badge {
                           left: 40px;
                           right: auto;
                       }

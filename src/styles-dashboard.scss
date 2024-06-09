@@ -59,7 +59,7 @@ body {
         family: var(--fontFamily) !important;
     };
 }
-.dashboard-h1, .dashboard-h2, .dashboard-h3, .dashboard-h4, .dashboard-h5, .dashboard-h6, dashboard-h1, dashboard-h2, dashboard-h3, dashboard-h4, dashboard-h5, dashboard-h6 {
+.workspace-h1, .workspace-h2, .workspace-h3, .workspace-h4, .workspace-h5, .workspace-h6, workspace-h1, workspace-h2, workspace-h3, workspace-h4, workspace-h5, workspace-h6 {
     color: var(--blackColor);
     font: {
         weight: 700;
@@ -73,22 +73,22 @@ body {
         margin-bottom: 0;
     }
 }
-.dashboard-h1, dashboard-h1 {
+.workspace-h1, workspace-h1 {
     font-size: 38px;
 }
-.dashboard-h2, dashboard-h2 {
+.workspace-h2, workspace-h2 {
     font-size: 30px;
 }
-.dashboard-h3, dashboard-h3 {
+.workspace-h3, workspace-h3 {
     font-size: 26px;
 }
-.dashboard-h4, dashboard-h4 {
+.workspace-h4, workspace-h4 {
     font-size: 22px;
 }
-.dashboard-h5, dashboard-h5 {
+.workspace-h5, workspace-h5 {
     font-size: 18px;
 }
-.dashboard-h6, dashboard-h6 {
+.workspace-h6, workspace-h6 {
     font-size: 14px;
 }
 a {
@@ -173,10 +173,10 @@ button {
 @import "./form";
 
 // Header CSS
-.dashboard-dashboard-header-area {
-    .dashboard-header-right-side {
+.workspace-workspace-header-area {
+    .workspace-header-right-side {
         li {
-            .dashboard-profile-btn {
+            .workspace-profile-btn {
                 &.mat-mdc-icon-button {
                     .mat-mdc-button-persistent-ripple, .mat-ripple {
                         display: none;
@@ -205,7 +205,7 @@ button {
                 border-radius: 5px 5px 0 0;
                 padding: 15px;
 
-                dashboard-h5 {
+                workspace-h5 {
                     color: var(--whiteColor);
                     font-size: 18px;
                 }
@@ -231,7 +231,7 @@ button {
                         width: 50px;
                         border-radius: 50%;
                     }
-                    .dashboard-title {
+                    .workspace-title {
                         margin-left: 14px;
 
                         h6 {
@@ -310,8 +310,8 @@ button {
                         color: var(--heraBlueColor);
                     }
                 }
-                .dashboard-d-flex {
-                    &.dashboard-flex-wrap {
+                .workspace-d-flex {
+                    &.workspace-flex-wrap {
                         padding: 7px;
                     }
                 }
@@ -708,7 +708,7 @@ button {
                                         color: var(--heraBlueColor);
                                     }
                                 }
-                                .dashboard-badge {
+                                .workspace-badge {
                                     font-size: 14px;
                                     border-radius: 4px;
                                     padding: 4px 13px 5px;
@@ -915,7 +915,7 @@ button {
                                             };
                                         }
                                     }
-                                    .dashboard-badge {
+                                    .workspace-badge {
                                         background: rgba(0, 182, 155, 0.1);
                                         color: #00b69b;
 
@@ -951,7 +951,7 @@ button {
                                     width: 30px;
                                     height: 30px;
                                 }
-                                .dashboard-badge {
+                                .workspace-badge {
                                     color: #00B69B;
                                     background: rgba(0, 182, 155, 0.1);
 
@@ -991,10 +991,10 @@ button {
                             .mdc-data-table__row {
                                 .mdc-data-table__cell {
                                     .user-info {
-                                        .dashboard-title {
+                                        .workspace-title {
                                             margin-left: 12px;
 
-                                            dashboard-h5 {
+                                            workspace-h5 {
                                                 font-size: 16px;
                                             }
                                             span {
@@ -1002,7 +1002,7 @@ button {
                                             }
                                         }
                                     }
-                                    .dashboard-badge {
+                                    .workspace-badge {
                                         background: rgba(0, 182, 155, 0.1);
                                         color: #00b69b;
 
@@ -1351,7 +1351,7 @@ button {
                                                         margin-bottom: 0;
                                                     }
                                                 }
-                                                .dashboard-badge {
+                                                .workspace-badge {
                                                     border-radius: 4px;
                                                     padding: 4px 20px 5px;
                                                     color: var(--heraBlueColor);
@@ -1790,12 +1790,12 @@ quill-editor {
 }
 
 // Breadcrumb CSS
-.dashboard-breadcrumb-card {
-    .dashboard-breadcrumb {
+.workspace-breadcrumb-card {
+    .workspace-breadcrumb {
         list-style-type: none;
         margin-top: 0;
 
-        .dashboard-breadcrumb-item {
+        .workspace-breadcrumb-item {
             display: inline-block;
             position: relative;
             font: {
@@ -1851,8 +1851,8 @@ quill-editor {
 }
 
 // Create Dialog Box
-.dashboard-create-dialog-box {
-    .dashboard-title {
+.workspace-create-dialog-box {
+    .workspace-title {
         background: #F7F8F7;
         padding: 25px;
 
@@ -1870,7 +1870,7 @@ quill-editor {
     form {
         padding: 25px;
 
-        .dashboard-form-group {
+        .workspace-form-group {
             margin-bottom: 25px;
 
             label {
@@ -2129,7 +2129,7 @@ quill-editor {
     background-color: #0d1015;
     color: var(--whiteColor);
 
-    .dashboard-h1, .dashboard-h2, .dashboard-h3, .dashboard-h4, .dashboard-h5, .dashboard-h6, dashboard-h1, dashboard-h2, dashboard-h3, dashboard-h4, dashboard-h5, dashboard-h6 {
+    .workspace-h1, .workspace-h2, .workspace-h3, .workspace-h4, .workspace-h5, .workspace-h6, workspace-h1, workspace-h2, workspace-h3, workspace-h4, workspace-h5, workspace-h6 {
         color: var(--whiteColor);
     }
     p {
@@ -2508,9 +2508,9 @@ quill-editor {
     }
 
     // Breadcrumb CSS
-    .dashboard-breadcrumb-card {
-        .dashboard-breadcrumb {
-            .dashboard-breadcrumb-item {
+    .workspace-breadcrumb-card {
+        .workspace-breadcrumb {
+            .workspace-breadcrumb-item {
                 &::before {
                     background: #A0A0A0;
                 }
@@ -2873,7 +2873,7 @@ quill-editor {
                                 .mdc-data-table__row {
                                     .mdc-data-table__cell {
                                         .user-info {
-                                            .dashboard-title {
+                                            .workspace-title {
                                                 margin: {
                                                     left: 0;
                                                     right: 12px;
@@ -3168,9 +3168,9 @@ quill-editor {
     }
 
     // Breadcrumb CSS
-    .dashboard-breadcrumb-card {
-        .dashboard-breadcrumb {
-            .dashboard-breadcrumb-item {
+    .workspace-breadcrumb-card {
+        .workspace-breadcrumb {
+            .workspace-breadcrumb-item {
                 &::before {
                     right: -13px;
                     left: auto;
@@ -3270,7 +3270,7 @@ quill-editor {
     .h4, h4 {
         font-size: 20px;
     }
-    .dashboard-h5, dashboard-h5 {
+    .workspace-h5, workspace-h5 {
         font-size: 16px;
     }
     .h6, h6 {
@@ -3302,7 +3302,7 @@ quill-editor {
                     border-radius: 5px 5px 0 0;
                     padding: 12px;
 
-                    dashboard-h5 {
+                    workspace-h5 {
                         font-size: 15px;
                     }
                     button {
@@ -3316,7 +3316,7 @@ quill-editor {
                         img {
                             width: 45px;
                         }
-                        .dashboard-title {
+                        .workspace-title {
                             margin-left: 12px;
 
                             h6 {
@@ -3348,8 +3348,8 @@ quill-editor {
                             font-size: 13px;
                         }
                     }
-                    .dashboard-d-flex {
-                        &.dashboard-flex-wrap {
+                    .workspace-d-flex {
+                        &.workspace-flex-wrap {
                             padding: 5px;
                         }
                     }
@@ -3504,7 +3504,7 @@ quill-editor {
                                             border-radius: 5px;
                                         }
                                     }
-                                    .dashboard-badge {
+                                    .workspace-badge {
                                         font-size: 13px;
                                     }
                                 }
@@ -3572,7 +3572,7 @@ quill-editor {
                                 .mdc-data-table__cell {
                                     padding: 12px 15px;
 
-                                    .dashboard-badge {
+                                    .workspace-badge {
                                         padding: 4px 18px 5px;
                                     }
                                     .name-info {
@@ -3673,7 +3673,7 @@ quill-editor {
                                                             white-space: nowrap;
                                                         }
                                                     }
-                                                    .dashboard-badge {
+                                                    .workspace-badge {
                                                         padding: 4px 15px 5px;
                                                     }
                                                 }
@@ -3794,15 +3794,15 @@ quill-editor {
     }
 
     // Breadcrumb CSS
-    .dashboard-breadcrumb-card {
-        .dashboard-breadcrumb {
+    .workspace-breadcrumb-card {
+        .workspace-breadcrumb {
             margin-top: 12px;
         }
     }
 
     // Create Dialog Box
-    .dashboard-create-dialog-box {
-        .dashboard-title {
+    .workspace-create-dialog-box {
+        .workspace-title {
             padding: 15px;
 
             .close-btn {
@@ -3812,7 +3812,7 @@ quill-editor {
         form {
             padding: 15px;
 
-            .dashboard-form-group {
+            .workspace-form-group {
                 margin-bottom: 15px;
 
                 .input-folder-name {
@@ -4142,7 +4142,7 @@ quill-editor {
         &.mat-mdc-menu-panel {
             &.mat-mdc-menu-panel {
                 .menu-header {
-                  dashboard-h5 {
+                  workspace-h5 {
                         font-size: 16px;
                     }
                     button {
@@ -4151,7 +4151,7 @@ quill-editor {
                 }
                 .menu-body {
                     li {
-                        .dashboard-title {
+                        .workspace-title {
                             margin-left: 12px;
 
                             h6 {

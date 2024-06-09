@@ -1,4 +1,4 @@
-.dashboard-footer-area {
+.workspace-footer-area {
   padding: 25px;
 
   &.card-borderd-theme {
@@ -16,7 +16,7 @@
 
 @media only screen and (max-width : 767px) {
 
-  .dashboard-footer-area {
+  .workspace-footer-area {
       padding: 15px;
   }
 
@@ -24,7 +24,7 @@
 
 @media only screen and (min-width : 768px) and (max-width : 991px) {
 
-  .dashboard-footer-area {
+  .workspace-footer-area {
       padding: 20px;
   }
 

@@ -1,66 +1,66 @@
 <div
-  class="dashboard-breadcrumb-card dashboard-mb-25 dashboard-d-md-flex dashboard-align-items-center dashboard-justify-content-space-between">
-  <dashboard-h5 class="dashboard-mb-0">File Manager</dashboard-h5>
-  <ol class="dashboard-breadcrumb dashboard-mb-0 dashboard-ps-0">
-    <li class="dashboard-breadcrumb-item">
+  class="workspace-breadcrumb-card workspace-mb-25 workspace-d-md-flex workspace-align-items-center workspace-justify-content-space-between">
+  <workspace-h5 class="workspace-mb-0">File Manager</workspace-h5>
+  <ol class="workspace-breadcrumb workspace-mb-0 workspace-ps-0">
+    <li class="workspace-breadcrumb-item">
       <a routerLink="/">
         <i class="ri-home-8-line"></i>
         Dashboard
       </a>
     </li>
-    <li class="dashboard-breadcrumb-item dashboard-fw-semibold">File Manager</li>
+    <li class="workspace-breadcrumb-item workspace-fw-semibold">File Manager</li>
   </ol>
 </div>
 
-<div class="dashboard-row">
-  <div class="dashboard-col-lg-8 dashboard-col-xxl-12">
-    <div class="dashboard-row">
-      <div class="dashboard-col-sm-6 dashboard-col-xxl-3" *ngFor="let project of lProject">
-        <mat-card class="dashboard-mb-25 tagus-card dashboard-card-box">
-          <mat-card-header class="dashboard-mb-0">
+<div class="workspace-row">
+  <div class="workspace-col-lg-8 workspace-col-xxl-12">
+    <div class="workspace-row">
+      <div class="workspace-col-sm-6 workspace-col-xxl-3" *ngFor="let project of lProject">
+        <mat-card class="workspace-mb-25 tagus-card workspace-card-box">
+          <mat-card-header class="workspace-mb-0">
             <mat-checkbox class="fm-checkbox"></mat-checkbox>
             <button type="button" mat-button
-              class="dashboard-position-relative dot-btn dashboard-p-0 bg-transparent border-none"
+              class="workspace-position-relative dot-btn workspace-p-0 bg-transparent border-none"
               [matMenuTriggerFor]="monthMenu">
               <i class="ri-more-fill"></i>
             </button>
             <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
-              <button mat-menu-item type="button" class="bg-transparent border-none dashboard-position-relative"
+              <button mat-menu-item type="button" class="bg-transparent border-none workspace-position-relative"
                 (click)="showRenameDialog(project)">
                 <i class="ri-edit-line"></i> Rename
               </button>
-              <button mat-menu-item type="button" class="bg-transparent border-none dashboard-position-relative">
+              <button mat-menu-item type="button" class="bg-transparent border-none workspace-position-relative">
                 <i class="ri-download-cloud-2-line"></i> Download
               </button>
-              <button mat-menu-item type="button" class="bg-transparent border-none dashboard-position-relative"
+              <button mat-menu-item type="button" class="bg-transparent border-none workspace-position-relative"
                 (click)="deletelProject(project)">
                 <i class="ri-delete-bin-line"></i> Remove
               </button>
             </mat-menu>
           </mat-card-header>
           <mat-card-content>
-            <div class="dashboard-pt-50 dashboard-pb-50 dashboard-text-center">
+            <div class="workspace-pt-50 workspace-pb-50 workspace-text-center">
               <img src="../../../assets/img/icon/folder.png" alt="folder">
-              <span class="dashboard-d-block dashboard-fw-semibold mt-10"><a
+              <span class="workspace-d-block workspace-fw-semibold mt-10"><a
                   routerLink="/file-manager/projects">{{project.name}}</a></span>
             </div>
-            <div class="dashboard-d-flex dashboard-justify-content-space-between dashboard-align-items-center">
-              <span class="dashboard-d-block gray-color">387 Files</span>
-              <span class="dashboard-d-block gray-color">4.5 GB</span>
+            <div class="workspace-d-flex workspace-justify-content-space-between workspace-align-items-center">
+              <span class="workspace-d-block gray-color">387 Files</span>
+              <span class="workspace-d-block gray-color">4.5 GB</span>
             </div>
           </mat-card-content>
         </mat-card>
       </div>
     </div>
-    <mat-card class="dashboard-mb-25 tagus-card">
+    <mat-card class="workspace-mb-25 tagus-card">
       <mat-card-header>
-        <dashboard-h5 class="dashboard-mb-0">Recent Projects</dashboard-h5>
+        <workspace-h5 class="workspace-mb-0">Recent Projects</workspace-h5>
         <button mat-flat-button class="default-btn tagus" (click)="showCreateProjectDialog()">
           <i class="ri-add-fill"></i> Create Project
         </button>
       </mat-card-header>
       <mat-card-header>
-        <dashboard-h5 class="dashboard-mb-0">Recent Files</dashboard-h5>
+        <workspace-h5 class="workspace-mb-0">Recent Files</workspace-h5>
         <button mat-flat-button class="default-btn tagus" (click)="openCreateFolderDialog('300ms', '100ms')">
           <i class="ri-add-fill"></i> Create Folder
         </button>
@@ -70,12 +70,12 @@
           <table class="table">
             <thead>
               <tr>
-                <th class="dashboard-fw-semibold main-color">Name</th>
-                <th class="dashboard-fw-semibold gray-color">Owner</th>
-                <th class="dashboard-fw-semibold gray-color">File Size</th>
-                <th class="dashboard-fw-semibold gray-color">Listed Date</th>
-                <th class="dashboard-fw-semibold gray-color">File Item</th>
-                <th class="dashboard-fw-semibold gray-color">Actions</th>
+                <th class="workspace-fw-semibold main-color">Name</th>
+                <th class="workspace-fw-semibold gray-color">Owner</th>
+                <th class="workspace-fw-semibold gray-color">File Size</th>
+                <th class="workspace-fw-semibold gray-color">Listed Date</th>
+                <th class="workspace-fw-semibold gray-color">File Item</th>
+                <th class="workspace-fw-semibold gray-color">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -83,7 +83,7 @@
                 <td>
                   <div class="name-info d-flex align-items-center">
                     <img src="../../../assets/img/icon/folder.png" alt="folder">
-                    <dashboard-h5 class="dashboard-fw-semibold dashboard-mb-0">Product UI/UX Design</dashboard-h5>
+                    <workspace-h5 class="workspace-fw-semibold workspace-mb-0">Product UI/UX Design</workspace-h5>
                   </div>
                 </td>
                 <td class="gray-color">Danielle Thompson</td>
@@ -92,7 +92,7 @@
                 <td class="gray-color">02</td>
                 <td>
                   <button type="button" mat-button
-                    class="position-relative dot-btn dashboard-p-0 bg-transparent border-none"
+                    class="position-relative dot-btn workspace-p-0 bg-transparent border-none"
                     [matMenuTriggerFor]="actionMenu">
                     <i class="ri-more-fill"></i>
                   </button>
@@ -119,7 +119,7 @@
                 <td>
                   <div class="name-info d-flex align-items-center">
                     <img src="../../../assets/img/icon/folder.png" alt="folder">
-                    <dashboard-h5 class="dashboard-fw-semibold dashboard-mb-0">App Design & Development</dashboard-h5>
+                    <workspace-h5 class="workspace-fw-semibold workspace-mb-0">App Design & Development</workspace-h5>
                   </div>
                 </td>
                 <td class="gray-color">Coder Themes</td>
@@ -128,7 +128,7 @@
                 <td class="gray-color">06</td>
                 <td>
                   <button type="button" mat-button
-                    class="position-relative dot-btn dashboard-p-0 bg-transparent border-none"
+                    class="position-relative dot-btn workspace-p-0 bg-transparent border-none"
                     [matMenuTriggerFor]="actionMenu">
                     <i class="ri-more-fill"></i>
                   </button>
@@ -155,7 +155,7 @@
                 <td>
                   <div class="name-info d-flex align-items-center">
                     <img src="../../../assets/img/icon/folder.png" alt="folder">
-                    <dashboard-h5 class="dashboard-fw-semibold dashboard-mb-0">Ubold-sketch-design.zip</dashboard-h5>
+                    <workspace-h5 class="workspace-fw-semibold workspace-mb-0">Ubold-sketch-design.zip</workspace-h5>
                   </div>
                 </td>
                 <td class="gray-color">Gary Coley</td>
@@ -164,7 +164,7 @@
                 <td class="gray-color">03</td>
                 <td>
                   <button type="button" mat-button
-                    class="position-relative dot-btn dashboard-p-0 bg-transparent border-none"
+                    class="position-relative dot-btn workspace-p-0 bg-transparent border-none"
                     [matMenuTriggerFor]="actionMenu">
                     <i class="ri-more-fill"></i>
                   </button>
@@ -191,7 +191,7 @@
                 <td>
                   <div class="name-info d-flex align-items-center">
                     <img src="../../../assets/img/icon/folder.png" alt="folder">
-                    <dashboard-h5 class="dashboard-fw-semibold dashboard-mb-0">Annualreport.pdf</dashboard-h5>
+                    <workspace-h5 class="workspace-fw-semibold workspace-mb-0">Annualreport.pdf</workspace-h5>
                   </div>
                 </td>
                 <td class="gray-color">Cooper Sharwood</td>
@@ -200,7 +200,7 @@
                 <td class="gray-color">05</td>
                 <td>
                   <button type="button" mat-button
-                    class="position-relative dot-btn dashboard-p-0 bg-transparent border-none"
+                    class="position-relative dot-btn workspace-p-0 bg-transparent border-none"
                     [matMenuTriggerFor]="actionMenu">
                     <i class="ri-more-fill"></i>
                   </button>
@@ -227,7 +227,7 @@
                 <td>
                   <div class="name-info d-flex align-items-center">
                     <img src="../../../assets/img/icon/folder.png" alt="folder">
-                    <dashboard-h5 class="dashboard-fw-semibold dashboard-mb-0">Wireframes</dashboard-h5>
+                    <workspace-h5 class="workspace-fw-semibold workspace-mb-0">Wireframes</workspace-h5>
                   </div>
                 </td>
                 <td class="gray-color">Jasper Rigg</td>
@@ -236,7 +236,7 @@
                 <td class="gray-color">01</td>
                 <td>
                   <button type="button" mat-button
-                    class="position-relative dot-btn dashboard-p-0 bg-transparent border-none"
+                    class="position-relative dot-btn workspace-p-0 bg-transparent border-none"
                     [matMenuTriggerFor]="actionMenu">
                     <i class="ri-more-fill"></i>
                   </button>
@@ -264,82 +264,82 @@
         </div>
       </mat-card-content>
     </mat-card>
-    <mat-card class="dashboard-mb-25 tagus-card">
+    <mat-card class="workspace-mb-25 tagus-card">
       <mat-card-header>
-        <dashboard-h5 class="dashboard-mb-0">Documents</dashboard-h5>
+        <workspace-h5 class="workspace-mb-0">Documents</workspace-h5>
         <button mat-flat-button class="default-btn tagus" (click)="openCreateDocumentDialog('300ms', '100ms')">
           <i class="ri-add-fill"></i> Create Document
         </button>
       </mat-card-header>
       <mat-card-content>
-        <div class="files-list dashboard-d-flex dashboard-flex-wrap">
+        <div class="files-list workspace-d-flex workspace-flex-wrap">
           <div class="file-item">
-            <div class="bg-gray dashboard-text-center mt-15 ps-20 pe-20 dashboard-pt-50 dashboard-pb-50 border-radius">
+            <div class="bg-gray workspace-text-center mt-15 ps-20 pe-20 workspace-pt-50 workspace-pb-50 border-radius">
               <img src="../../../assets/img/icon/jpg.png" alt="jpg">
-              <span class="d-block dashboard-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
+              <span class="d-block workspace-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
                   class="gray-color">sketch-design.zip</a></span>
             </div>
           </div>
           <div class="file-item">
-            <div class="bg-gray dashboard-text-center mt-15 ps-20 pe-20 dashboard-pt-50 dashboard-pb-50 border-radius">
+            <div class="bg-gray workspace-text-center mt-15 ps-20 pe-20 workspace-pt-50 workspace-pb-50 border-radius">
               <img src="../../../assets/img/icon/jpg.png" alt="jpg">
-              <span class="d-block dashboard-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
+              <span class="d-block workspace-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
                   class="gray-color">Compile.png</a></span>
             </div>
           </div>
           <div class="file-item">
-            <div class="bg-gray dashboard-text-center mt-15 ps-20 pe-20 dashboard-pt-50 dashboard-pb-50 border-radius">
+            <div class="bg-gray workspace-text-center mt-15 ps-20 pe-20 workspace-pt-50 workspace-pb-50 border-radius">
               <img src="../../../assets/img/icon/pdf2.png" alt="jpg">
-              <span class="d-block dashboard-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
+              <span class="d-block workspace-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
                   class="gray-color">Integrations.pdf</a></span>
             </div>
           </div>
           <div class="file-item">
-            <div class="bg-gray dashboard-text-center mt-15 ps-20 pe-20 dashboard-pt-50 dashboard-pb-50 border-radius">
+            <div class="bg-gray workspace-text-center mt-15 ps-20 pe-20 workspace-pt-50 workspace-pb-50 border-radius">
               <img src="../../../assets/img/icon/txt.png" alt="jpg">
-              <span class="d-block dashboard-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
+              <span class="d-block workspace-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
                   class="gray-color">contact&#64;32.txt</a></span>
             </div>
           </div>
           <div class="file-item">
-            <div class="bg-gray dashboard-text-center mt-15 ps-20 pe-20 dashboard-pt-50 dashboard-pb-50 border-radius">
+            <div class="bg-gray workspace-text-center mt-15 ps-20 pe-20 workspace-pt-50 workspace-pb-50 border-radius">
               <img src="../../../assets/img/icon/doc.png" alt="jpg">
-              <span class="d-block dashboard-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
+              <span class="d-block workspace-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
                   class="gray-color">app-Design.doc</a></span>
             </div>
           </div>
           <div class="file-item">
-            <div class="bg-gray dashboard-text-center mt-15 ps-20 pe-20 dashboard-pt-50 dashboard-pb-50 border-radius">
+            <div class="bg-gray workspace-text-center mt-15 ps-20 pe-20 workspace-pt-50 workspace-pb-50 border-radius">
               <img src="../../../assets/img/icon/png.png" alt="jpg">
-              <span class="d-block dashboard-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
+              <span class="d-block workspace-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
                   class="gray-color">image02.png</a></span>
             </div>
           </div>
           <div class="file-item">
-            <div class="bg-gray dashboard-text-center mt-15 ps-20 pe-20 dashboard-pt-50 dashboard-pb-50 border-radius">
+            <div class="bg-gray workspace-text-center mt-15 ps-20 pe-20 workspace-pt-50 workspace-pb-50 border-radius">
               <img src="../../../assets/img/icon/doc.png" alt="jpg">
-              <span class="d-block dashboard-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
+              <span class="d-block workspace-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
                   class="gray-color">Ubold-sketch.doc</a></span>
             </div>
           </div>
           <div class="file-item">
-            <div class="bg-gray dashboard-text-center mt-15 ps-20 pe-20 dashboard-pt-50 dashboard-pb-50 border-radius">
+            <div class="bg-gray workspace-text-center mt-15 ps-20 pe-20 workspace-pt-50 workspace-pb-50 border-radius">
               <img src="../../../assets/img/icon/txt.png" alt="jpg">
-              <span class="d-block dashboard-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
+              <span class="d-block workspace-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
                   class="gray-color">Annualreport.txt</a></span>
             </div>
           </div>
           <div class="file-item">
-            <div class="bg-gray dashboard-text-center mt-15 ps-20 pe-20 dashboard-pt-50 dashboard-pb-50 border-radius">
+            <div class="bg-gray workspace-text-center mt-15 ps-20 pe-20 workspace-pt-50 workspace-pb-50 border-radius">
               <img src="../../../assets/img/icon/xl4.png" alt="jpg">
-              <span class="d-block dashboard-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
+              <span class="d-block workspace-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
                   class="gray-color">Wireframes.xl4</a></span>
             </div>
           </div>
           <div class="file-item">
-            <div class="bg-gray dashboard-text-center mt-15 ps-20 pe-20 dashboard-pt-50 dashboard-pb-50 border-radius">
+            <div class="bg-gray workspace-text-center mt-15 ps-20 pe-20 workspace-pt-50 workspace-pb-50 border-radius">
               <img src="../../../assets/img/icon/jpg.png" alt="jpg">
-              <span class="d-block dashboard-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
+              <span class="d-block workspace-fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects"
                   class="gray-color">contact&#64;32.jpg</a></span>
             </div>
           </div>

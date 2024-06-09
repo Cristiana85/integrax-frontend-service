@@ -1,4 +1,4 @@
-.dashboard-card-box {
+.workspace-card-box {
   .fm-checkbox {
       margin: -10px 0 -10px -10px;
   }
@@ -55,7 +55,7 @@
                       img {
                           width: 20px;
                       }
-                      dashboard-h5 {
+                      workspace-h5 {
                           font-size: 15px;
                           margin-left: 10px;
                       }
@@ -150,7 +150,7 @@
   }
 }
 .component-rtl-enabled {
-  .dashboard-card-box {
+  .workspace-card-box {
       .fm-checkbox {
           margin: {
               left: 0;
@@ -174,7 +174,7 @@
               tr {
                   td {
                       .name-info {
-                        dashboard-h5 {
+                        workspace-h5 {
                               margin: {
                                   left: 0;
                                   right: 10px;
@@ -203,7 +203,7 @@
                       padding: 15px 20px;
 
                       .name-info {
-                        dashboard-h5 {
+                        workspace-h5 {
                               font-size: 14px;
                           }
                       }
@@ -227,7 +227,7 @@
 
 @media only screen and (min-width : 992px) and (max-width : 1199px) {
 
-  .dashboard-card-box {
+  .workspace-card-box {
       padding: {
           left: 15px;
           right: 15px;

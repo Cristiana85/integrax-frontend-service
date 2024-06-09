@@ -3411,13 +3411,13 @@ p {
     background-position: -89900%;
   }
 }
-.home-dashboard img {
+.home-workspace img {
   position: relative;
   top: 60px;
   z-index: 1;
 }
 @media (min-width: 768px) {
-  .home-dashboard.onepage-hero {
+  .home-workspace.onepage-hero {
     overflow: hidden;
   }
 }

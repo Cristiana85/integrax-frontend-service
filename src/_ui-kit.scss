@@ -39,10 +39,10 @@
     &.fw-bold {
         font-weight: 700 !important;
     }
-    &.dashboard-fw-semibold {
+    &.workspace-fw-semibold {
         font-weight: 600 !important;
     }
-    &.dashboard-d-block {
+    &.workspace-d-block {
         text-align: center !important;
         display: block !important;
         width: 100% !important;
@@ -476,7 +476,7 @@ a {
 }
 
 // Badge
-.dashboard-badge {
+.workspace-badge {
     --badge-padding-x: 12px;
     --badge-padding-y: 0.40em;
     --badge-font-size: 13px;
@@ -1070,7 +1070,7 @@ blockquote {
                 left: 50%;
                 top: 0;
             }
-            .dashboard-d-flex {
+            .workspace-d-flex {
                 justify-content: end;
             }
         }
@@ -1079,7 +1079,7 @@ blockquote {
                 float: right;
                 text-align: left;
 
-                .dashboard-d-flex {
+                .workspace-d-flex {
                     justify-content: unset;
                 }
             }
@@ -2461,7 +2461,7 @@ blockquote {
                     margin: 0;
                     left: 0;
                 }
-                .dashboard-d-flex {
+                .workspace-d-flex {
                     justify-content: unset;
                 }
             }
