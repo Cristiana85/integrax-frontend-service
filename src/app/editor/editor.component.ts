@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, HostListener, OnDestroy, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnDestroy, OnInit, ViewChild, ViewContainerRef, ViewEncapsulation } from '@angular/core';
 import { Selector } from './components/integra-editor-selector';
 import { LibAvoidWasmService } from '../services/wasm/libavoid/libavoid.wasm.service';
 import { filter } from 'rxjs';
@@ -7,6 +7,7 @@ import { filter } from 'rxjs';
   selector: 'i-editor',
   templateUrl: './editor.component.html',
   styleUrls: ['./editor.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 
 export class EditorComponent implements OnInit, AfterViewInit, OnDestroy {

@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~jointjs/dist/joint.css';
+
+* {
+  overflow: hidden
+}
+
+
+.zooming * {
+  cursor: inherit !important;
+}
+
+.shape-correction {
+  shape-rendering: crispEdges;
+  //vector-effect: non-scaling-stroke;
+  /*shape-rendering: -moz-crisp-edges;
+  shape-rendering: -o-crisp-edges;
+  shape-rendering: -webkit-optimize-contrast;*/
+}
+
+/* port styling
+.available-magnet {
+  fill: #5DA271;
+}
+
+.available-cell rect {
+  stroke-dasharray: 5, 2;
+}
+*/
